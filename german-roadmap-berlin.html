@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deutsch Meistern – A1 to B1 Berlin Sprachtest Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0d0d0d;
+    --white: #f5f0e8;
+    --gold: #c8a84b;
+    --gold-light: #e8c97a;
+    --red: #c0392b;
+    --blue: #1a3a5c;
+    --blue-mid: #2563a8;
+    --green: #1a5c3a;
+    --green-light: #27ae60;
+    --grey: #2a2a2a;
+    --grey-mid: #444;
+    --grey-light: #888;
+    --cream: #fdf6e3;
+    --a1-color: #e74c3c;
+    --a2-color: #e67e22;
+    --b1-color: #2563a8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 40%, #0d0d0d 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 60px,
+      rgba(200,168,75,0.04) 60px, rgba(200,168,75,0.04) 61px
+    ),
+    repeating-linear-gradient(
+      90deg, transparent, transparent 60px,
+      rgba(200,168,75,0.04) 60px, rgba(200,168,75,0.04) 61px
+    );
+  }
+  .flag-bar {
+    display: flex; gap: 0;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(200,168,75,0.3);
+  }
+  .flag-bar div { width: 80px; height: 8px; }
+  .flag-black { background: #1a1a1a; }
+  .flag-red { background: #DD0000; }
+  .flag-gold { background: #FFCE00; }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: var(--grey-light);
+    margin-bottom: 30px;
+  }
+  .hero-badges {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    justify-content: center; margin-bottom: 50px;
+  }
+  .badge {
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .badge-a1 { background: var(--a1-color); color: #fff; }
+  .badge-a2 { background: var(--a2-color); color: #fff; }
+  .badge-b1 { background: var(--b1-color); color: #fff; }
+  .badge-berlin { background: var(--gold); color: var(--black); }
+
+  .hero-stats {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 24px; max-width: 800px; width: 100%;
+  }
+  .stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,168,75,0.2);
+    padding: 20px; text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700;
+    color: var(--gold); display: block;
+  }
+  .stat-label {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--grey-light);
+  }
+
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,13,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,168,75,0.2);
+    padding: 0 20px;
+    display: flex; gap: 0;
+    overflow-x: auto;
+  }
+  .sticky-nav a {
+    padding: 14px 22px;
+    color: var(--grey-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .sticky-nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ── SECTION HEADER ── */
+  .section { padding: 80px 0; }
+  .section-header {
+    display: flex; align-items: flex-end;
+    gap: 24px; margin-bottom: 50px;
+    border-bottom: 1px solid rgba(200,168,75,0.2);
+    padding-bottom: 24px;
+  }
+  .section-level {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem; font-weight: 900;
+    line-height: 1; opacity: 0.08;
+    color: var(--gold);
+    user-select: none;
+  }
+  .section-title-group h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; font-weight: 700;
+    color: var(--white);
+  }
+  .section-title-group p {
+    color: var(--grey-light);
+    font-size: 0.9rem;
+    font-family: 'DM Mono', monospace;
+    margin-top: 4px;
+  }
+  .level-pill {
+    padding: 4px 14px; border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+
+  .a1 { background: rgba(231,76,60,0.12); border: 1px solid var(--a1-color); }
+  .a2 { background: rgba(230,126,34,0.12); border: 1px solid var(--a2-color); }
+  .b1 { background: rgba(37,99,168,0.12); border: 1px solid var(--b1-color); }
+  .berlin-section { background: rgba(200,168,75,0.05); }
+
+  /* ── CARDS ── */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 20px; margin: 28px 0; }
+  .card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 24px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .card:hover { border-color: rgba(200,168,75,0.4); transform: translateY(-2px); }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .card p { font-size: 0.9rem; color: rgba(245,240,232,0.75); line-height: 1.65; }
+
+  /* ── TOPIC BLOCK ── */
+  .topic-block {
+    background: rgba(255,255,255,0.025);
+    border-left: 3px solid var(--gold);
+    padding: 28px 32px; margin: 24px 0;
+  }
+  .topic-block.red-border { border-left-color: var(--a1-color); }
+  .topic-block.orange-border { border-left-color: var(--a2-color); }
+  .topic-block.blue-border { border-left-color: var(--b1-color); }
+  .topic-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  /* ── EXAMPLE TABLE ── */
+  .ex-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .ex-table th {
+    background: rgba(200,168,75,0.1);
+    color: var(--gold);
+    padding: 10px 16px;
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(200,168,75,0.3);
+  }
+  .ex-table td {
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(245,240,232,0.85);
+    vertical-align: top;
+  }
+  .ex-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .de { font-family: 'DM Mono', monospace; color: var(--white); font-size: 0.9rem; }
+  .en { color: var(--grey-light); font-style: italic; }
+  .note { color: var(--gold); font-size: 0.8rem; }
+
+  /* ── VOCAB PILL GRID ── */
+  .vocab-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+  .vocab-pill {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-size: 0.83rem;
+  }
+  .vocab-pill .word { font-family: 'DM Mono', monospace; color: var(--white); }
+  .vocab-pill .trans { color: var(--grey-light); font-style: italic; font-size: 0.78rem; margin-left: 6px; }
+
+  /* ── DIALOGUE BOX ── */
+  .dialogue {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 24px; margin: 20px 0;
+  }
+  .dialogue-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .dialogue-line { margin: 8px 0; display: flex; gap: 12px; align-items: flex-start; }
+  .speaker { font-weight: 700; min-width: 60px; font-size: 0.82rem; }
+  .speaker.a { color: var(--a1-color); }
+  .speaker.b { color: var(--b1-color); }
+  .line-text { font-size: 0.9rem; color: rgba(245,240,232,0.88); }
+  .line-trans { font-size: 0.78rem; color: var(--grey-light); font-style: italic; margin-top: 2px; }
+
+  /* ── GRAMMAR BOX ── */
+  .grammar-box {
+    background: rgba(37,99,168,0.07);
+    border: 1px solid rgba(37,99,168,0.25);
+    padding: 24px; margin: 20px 0;
+  }
+  .grammar-box h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; letter-spacing: 2px;
+    text-transform: uppercase; color: #7ab3e8;
+    margin-bottom: 14px;
+  }
+  .formula {
+    background: rgba(0,0,0,0.4);
+    border-left: 3px solid #2563a8;
+    padding: 12px 18px; margin: 10px 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem; color: var(--gold-light);
+  }
+
+  /* ── TIP BOX ── */
+  .tip-box {
+    background: rgba(200,168,75,0.07);
+    border: 1px solid rgba(200,168,75,0.25);
+    padding: 18px 24px; margin: 20px 0;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .tip-icon { font-size: 1.3rem; margin-top: 2px; }
+  .tip-box p { font-size: 0.88rem; color: rgba(245,240,232,0.85); }
+  .tip-box strong { color: var(--gold); }
+
+  /* ── WARN BOX ── */
+  .warn-box {
+    background: rgba(231,76,60,0.07);
+    border: 1px solid rgba(231,76,60,0.25);
+    padding: 18px 24px; margin: 20px 0;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .warn-box p { font-size: 0.88rem; color: rgba(245,240,232,0.85); }
+  .warn-box strong { color: var(--a1-color); }
+
+  /* ── BERLIN EXAM SECTION ── */
+  .exam-card {
+    background: linear-gradient(135deg, rgba(200,168,75,0.08) 0%, rgba(37,99,168,0.08) 100%);
+    border: 1px solid rgba(200,168,75,0.3);
+    padding: 32px; margin: 24px 0;
+  }
+  .exam-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; color: var(--gold); margin-bottom: 16px;
+  }
+  .exam-parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; margin-top: 20px; }
+  .exam-part {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 18px;
+  }
+  .exam-part-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .exam-part h4 { font-size: 1rem; color: var(--white); margin-bottom: 6px; }
+  .exam-part p { font-size: 0.82rem; color: var(--grey-light); }
+
+  /* ── PROGRESS ROADMAP ── */
+  .roadmap {
+    position: relative; padding-left: 32px; margin: 30px 0;
+  }
+  .roadmap::before {
+    content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, var(--a1-color), var(--a2-color), var(--b1-color));
+  }
+  .roadmap-item { position: relative; margin-bottom: 32px; }
+  .roadmap-dot {
+    position: absolute; left: -28px; top: 4px;
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--black);
+  }
+  .roadmap-item h4 { font-size: 1rem; color: var(--white); margin-bottom: 6px; }
+  .roadmap-item p { font-size: 0.85rem; color: var(--grey-light); }
+  .roadmap-time {
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    color: var(--gold); letter-spacing: 1px; margin-bottom: 4px;
+  }
+
+  /* ── CONJUGATION TABLE ── */
+  .conj-table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+  .conj-table th, .conj-table td { padding: 8px 14px; border: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; }
+  .conj-table th { background: rgba(255,255,255,0.05); color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; }
+  .conj-table td { color: rgba(245,240,232,0.85); }
+  .conj-table td:first-child { color: var(--grey-light); font-family: 'DM Mono', monospace; font-size: 0.82rem; }
+  .conj-table .highlight { color: var(--gold-light); font-weight: 700; }
+
+  /* ── BERLIN MAP ── */
+  .berlin-banner {
+    background: linear-gradient(90deg, #0d0d0d 0%, #1a1200 50%, #0d0d0d 100%);
+    border: 1px solid rgba(200,168,75,0.3);
+    padding: 40px; text-align: center; margin: 40px 0;
+    position: relative; overflow: hidden;
+  }
+  .berlin-banner::before {
+    content: 'BERLIN';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 12rem; font-weight: 900;
+    color: rgba(200,168,75,0.04); letter-spacing: -4px;
+    white-space: nowrap; user-select: none;
+  }
+  .berlin-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; color: var(--gold);
+    position: relative;
+  }
+  .berlin-banner p { color: var(--grey-light); margin-top: 8px; font-size: 0.9rem; position: relative; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: rgba(0,0,0,0.6);
+    border-top: 1px solid rgba(200,168,75,0.2);
+    padding: 40px 24px; text-align: center;
+    color: var(--grey-light); font-size: 0.82rem;
+  }
+  footer strong { color: var(--gold); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,168,75,0.3), transparent);
+    margin: 40px 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:600px) {
+    .hero-stats { grid-template-columns: repeat(2,1fr); }
+    .section-level { font-size: 3rem; }
+    .section-title-group h2 { font-size: 1.8rem; }
+    .exam-parts { grid-template-columns: 1fr; }
+  }
+
+  /* ── SCROLL ANIMATION ── */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
+
+  /* quick helper */
+  .mt24 { margin-top: 24px; }
+  .mb24 { margin-bottom: 24px; }
+  .gold { color: var(--gold); }
+  .red { color: var(--a1-color); }
+  .orange { color: var(--a2-color); }
+  .blue { color: #7ab3e8; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero">
+  <div class="flag-bar">
+    <div class="flag-black"></div>
+    <div class="flag-red"></div>
+    <div class="flag-gold"></div>
+  </div>
+  <p class="hero-eyebrow">Complete Learning Roadmap</p>
+  <h1>Deutsch<br><span>Meistern</span></h1>
+  <p class="hero-sub">From Zero to B1 — Pass Your Berlin Sprachtest</p>
+  <div class="hero-badges">
+    <span class="badge badge-a1">A1 Beginner</span>
+    <span class="badge badge-a2">A2 Elementary</span>
+    <span class="badge badge-b1">B1 Intermediate</span>
+    <span class="badge badge-berlin">Berlin Focused</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">1,200+</span><span class="stat-label">Vocab Examples</span></div>
+    <div class="stat"><span class="stat-num">300+</span><span class="stat-label">Grammar Rules</span></div>
+    <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Dialogues</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Levels Covered</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════ NAV ══════════════════════ -->
+<nav class="sticky-nav">
+  <a href="#overview">Overview</a>
+  <a href="#a1">A1 Level</a>
+  <a href="#a2">A2 Level</a>
+  <a href="#b1">B1 Level</a>
+  <a href="#grammar">Grammar Hub</a>
+  <a href="#vocab">Vocab Hub</a>
+  <a href="#exam">Berlin Exam</a>
+  <a href="#plan">Study Plan</a>
+</nav>
+
+<!-- ══════════════════════ OVERVIEW ══════════════════════ -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">00</div>
+      <div class="section-title-group">
+        <div class="level-pill" style="background:rgba(200,168,75,0.1);border:1px solid var(--gold);color:var(--gold)">ROADMAP</div>
+        <h2>Your Learning Journey</h2>
+        <p>From complete beginner to B1 certified — a structured path</p>
+      </div>
+    </div>
+
+    <div class="roadmap fade-in">
+      <div class="roadmap-item">
+        <div class="roadmap-dot" style="background:var(--a1-color)"></div>
+        <div class="roadmap-time">Months 1–2 · ~100 hours</div>
+        <h4>🔴 A1 — Breakthrough</h4>
+        <p>Greetings, numbers, basic sentences, present tense, articles, family & daily life.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot" style="background:var(--a2-color)"></div>
+        <div class="roadmap-time">Months 3–5 · ~200 hours</div>
+        <h4>🟠 A2 — Waystage</h4>
+        <p>Past tense (Perfekt & Präteritum), modal verbs, subordinate clauses, shopping, travel, appointments.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot" style="background:var(--b1-color)"></div>
+        <div class="roadmap-time">Months 6–10 · ~350 hours</div>
+        <h4>🔵 B1 — Threshold</h4>
+        <p>Konjunktiv II, passive voice, relative clauses, complex opinions, all 4 cases mastered, extended vocabulary.</p>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-dot" style="background:var(--gold)"></div>
+        <div class="roadmap-time">Month 10–12</div>
+        <h4>🏆 Berlin Sprachtest Ready</h4>
+        <p>Telc Deutsch B1 / Goethe-Zertifikat B1 — Reading, Listening, Writing, Speaking fully prepared.</p>
+      </div>
+    </div>
+
+    <div class="tip-box fade-in">
+      <div class="tip-icon">💡</div>
+      <p><strong>Berlin Sprachtest:</strong> Most commonly the <strong>telc Deutsch B1</strong> or <strong>Goethe-Zertifikat B1</strong>. Required for permanent residency (Niederlassungserlaubnis) and naturalization (Einbürgerung) in Germany. This guide prepares you for both.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ A1 ══════════════════════ -->
+<section class="section a1" id="a1">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">A1</div>
+      <div class="section-title-group">
+        <div class="level-pill badge-a1">Beginner · Anfänger</div>
+        <h2>A1 — The Foundation</h2>
+        <p>Master the absolute basics: sounds, greetings, numbers, core grammar</p>
+      </div>
+    </div>
+
+    <!-- 1. The German Alphabet & Pronunciation -->
+    <div class="topic-block red-border fade-in">
+      <h3>1. The German Alphabet & Pronunciation</h3>
+      <p style="color:var(--grey-light);margin-bottom:16px;font-size:0.88rem;">German is phonetically consistent — once you know the rules, you can read anything.</p>
+      <table class="ex-table">
+        <tr><th>Letter/Sound</th><th>Rule</th><th>German Example</th><th>English Sound Like</th></tr>
+        <tr><td class="de">Ä / ä</td><td>Umlaut A</td><td class="de">Bäcker, Ärger</td><td>like "air" in British English</td></tr>
+        <tr><td class="de">Ö / ö</td><td>Umlaut O</td><td class="de">Öl, schön, hören</td><td>like "ur" with rounded lips</td></tr>
+        <tr><td class="de">Ü / ü</td><td>Umlaut U</td><td class="de">über, für, Tür</td><td>like "ee" with rounded lips</td></tr>
+        <tr><td class="de">ß</td><td>Sharp S (Eszett)</td><td class="de">Straße, heißen, groß</td><td>always "ss" sound</td></tr>
+        <tr><td class="de">ch</td><td>Two sounds</td><td class="de">ich (soft), Bach (hard)</td><td>soft: like "h" in huge; hard: like Scottish "loch"</td></tr>
+        <tr><td class="de">ei</td><td>Diphthong</td><td class="de">nein, mein, Ei</td><td>"eye"</td></tr>
+        <tr><td class="de">ie</td><td>Long i</td><td class="de">die, fliegen, Bier</td><td>"ee"</td></tr>
+        <tr><td class="de">eu / äu</td><td>Diphthong</td><td class="de">neu, Leute, Bäume</td><td>"oy" as in boy</td></tr>
+        <tr><td class="de">sp / st</td><td>At word start</td><td class="de">spielen, Stadt</td><td>"shp-", "sht-"</td></tr>
+        <tr><td class="de">w</td><td>Always V sound</td><td class="de">Wasser, Wort, wir</td><td>"v" as in vine</td></tr>
+        <tr><td class="de">v</td><td>Usually F sound</td><td class="de">Vater, vier, von</td><td>"f" as in father</td></tr>
+        <tr><td class="de">z</td><td>Always TS</td><td class="de">Zeit, zehn, Zug</td><td>"ts" as in cats</td></tr>
+        <tr><td class="de">j</td><td>Y sound</td><td class="de">Jahr, ja, jetzt</td><td>"y" as in yes</td></tr>
+        <tr><td class="de">g</td><td>Usually hard</td><td class="de">gut, gehen, Tag</td><td>"g" as in go; final -ig = "ich"</td></tr>
+        <tr><td class="de">qu</td><td>KV sound</td><td class="de">Qualität, quer</td><td>"kv"</td></tr>
+      </table>
+    </div>
+
+    <!-- 2. Essential Greetings -->
+    <div class="topic-block red-border fade-in">
+      <h3>2. Essential Greetings & Phrases (Begrüßungen)</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Formal Greetings</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">Guten Morgen!</td><td class="en">Good morning!</td></tr>
+            <tr><td class="de">Guten Tag!</td><td class="en">Good day! (standard)</td></tr>
+            <tr><td class="de">Guten Abend!</td><td class="en">Good evening!</td></tr>
+            <tr><td class="de">Auf Wiedersehen!</td><td class="en">Goodbye (formal)</td></tr>
+            <tr><td class="de">Auf Wiederhören!</td><td class="en">Goodbye (on phone)</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Informal Greetings</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">Hallo!</td><td class="en">Hello!</td></tr>
+            <tr><td class="de">Hi!</td><td class="en">Hi!</td></tr>
+            <tr><td class="de">Hey!</td><td class="en">Hey!</td></tr>
+            <tr><td class="de">Tschüss!</td><td class="en">Bye!</td></tr>
+            <tr><td class="de">Ciao!</td><td class="en">Bye! (casual, Italian borrowed)</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>How are you?</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">Wie geht es Ihnen?</td><td class="en">How are you? (formal)</td></tr>
+            <tr><td class="de">Wie geht es dir?</td><td class="en">How are you? (informal)</td></tr>
+            <tr><td class="de">Wie geht's?</td><td class="en">How's it going?</td></tr>
+            <tr><td class="de">Mir geht es gut, danke.</td><td class="en">I'm fine, thank you.</td></tr>
+            <tr><td class="de">Nicht so gut, leider.</td><td class="en">Not so well, unfortunately.</td></tr>
+            <tr><td class="de">Es geht so.</td><td class="en">So-so.</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Polite Essentials</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">Bitte</td><td class="en">Please / You're welcome</td></tr>
+            <tr><td class="de">Danke (schön)</td><td class="en">Thank you (very much)</td></tr>
+            <tr><td class="de">Entschuldigung</td><td class="en">Excuse me / Sorry</td></tr>
+            <tr><td class="de">Es tut mir leid.</td><td class="en">I'm sorry.</td></tr>
+            <tr><td class="de">Kein Problem.</td><td class="en">No problem.</td></tr>
+            <tr><td class="de">Natürlich!</td><td class="en">Of course!</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Dialogue -->
+      <div class="dialogue">
+        <div class="dialogue-title">🎭 Dialogue 1: First Meeting</div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Hallo! Ich heiße Maria. Wie heißen Sie?</div><div class="line-trans">Hello! My name is Maria. What's your name?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Guten Tag! Ich bin Thomas. Freut mich!</div><div class="line-trans">Good day! I'm Thomas. Nice to meet you!</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Woher kommen Sie, Thomas?</div><div class="line-trans">Where are you from, Thomas?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Ich komme aus der Türkei. Und Sie?</div><div class="line-trans">I'm from Turkey. And you?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Ich komme aus Spanien. Ich wohne jetzt in Berlin.</div><div class="line-trans">I'm from Spain. I live in Berlin now.</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Ich auch! Ich wohne in Mitte.</div><div class="line-trans">Me too! I live in Mitte.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Numbers -->
+    <div class="topic-block red-border fade-in">
+      <h3>3. Numbers (Zahlen) — 0 to 1,000,000</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>0–20</h3>
+          <table class="ex-table">
+            <tr><td>0</td><td class="de">null</td></tr>
+            <tr><td>1</td><td class="de">eins</td></tr>
+            <tr><td>2</td><td class="de">zwei</td></tr>
+            <tr><td>3</td><td class="de">drei</td></tr>
+            <tr><td>4</td><td class="de">vier</td></tr>
+            <tr><td>5</td><td class="de">fünf</td></tr>
+            <tr><td>6</td><td class="de">sechs</td></tr>
+            <tr><td>7</td><td class="de">sieben</td></tr>
+            <tr><td>8</td><td class="de">acht</td></tr>
+            <tr><td>9</td><td class="de">neun</td></tr>
+            <tr><td>10</td><td class="de">zehn</td></tr>
+            <tr><td>11</td><td class="de">elf</td></tr>
+            <tr><td>12</td><td class="de">zwölf</td></tr>
+            <tr><td>13</td><td class="de">dreizehn</td></tr>
+            <tr><td>14</td><td class="de">vierzehn</td></tr>
+            <tr><td>15</td><td class="de">fünfzehn</td></tr>
+            <tr><td>16</td><td class="de">sechzehn</td></tr>
+            <tr><td>17</td><td class="de">siebzehn</td></tr>
+            <tr><td>18</td><td class="de">achtzehn</td></tr>
+            <tr><td>19</td><td class="de">neunzehn</td></tr>
+            <tr><td>20</td><td class="de">zwanzig</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>21–100 Pattern</h3>
+          <table class="ex-table">
+            <tr><td>21</td><td class="de">einundzwanzig</td></tr>
+            <tr><td>22</td><td class="de">zweiundzwanzig</td></tr>
+            <tr><td>30</td><td class="de">dreißig</td></tr>
+            <tr><td>40</td><td class="de">vierzig</td></tr>
+            <tr><td>50</td><td class="de">fünfzig</td></tr>
+            <tr><td>60</td><td class="de">sechzig</td></tr>
+            <tr><td>70</td><td class="de">siebzig</td></tr>
+            <tr><td>80</td><td class="de">achtzig</td></tr>
+            <tr><td>90</td><td class="de">neunzig</td></tr>
+            <tr><td>100</td><td class="de">hundert</td></tr>
+            <tr><td>101</td><td class="de">hunderteins</td></tr>
+            <tr><td>200</td><td class="de">zweihundert</td></tr>
+            <tr><td>1,000</td><td class="de">tausend</td></tr>
+            <tr><td>10,000</td><td class="de">zehntausend</td></tr>
+            <tr><td>1,000,000</td><td class="de">eine Million</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Ordinal Numbers (1st–20th)</h3>
+          <table class="ex-table">
+            <tr><td>1st</td><td class="de">erst-</td></tr>
+            <tr><td>2nd</td><td class="de">zweit-</td></tr>
+            <tr><td>3rd</td><td class="de">dritt-</td></tr>
+            <tr><td>4th</td><td class="de">viert-</td></tr>
+            <tr><td>5th</td><td class="de">fünft-</td></tr>
+            <tr><td>7th</td><td class="de">siebt-</td></tr>
+            <tr><td>8th</td><td class="de">acht-</td></tr>
+            <tr><td>10th</td><td class="de">zehnt-</td></tr>
+            <tr><td>20th</td><td class="de">zwanzigst-</td></tr>
+          </table>
+          <div class="tip-box" style="margin-top:12px">
+            <div class="tip-icon">💡</div>
+            <p><strong>Pattern:</strong> 2–19 add <em>-t</em>, 20+ add <em>-st</em>. Exceptions: erst, dritt, siebt, acht.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Articles & Gender -->
+    <div class="topic-block red-border fade-in">
+      <h3>4. Articles & Grammatical Gender (Der, Die, Das)</h3>
+      <div class="grammar-box">
+        <h4>⚡ The 3 Genders — Every Noun Has One!</h4>
+        <div class="formula">Masculine → der Mann (the man)</div>
+        <div class="formula">Feminine → die Frau (the woman)</div>
+        <div class="formula">Neuter → das Kind (the child)</div>
+        <div class="formula">Plural (all) → die Männer / die Frauen / die Kinder</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-icon">🧠</div>
+        <p><strong>Gender Hints:</strong> <span class="gold">Masculine:</span> -er, -ling, -ismus (der Computer, der Frühling) | <span class="gold">Feminine:</span> -ung, -heit, -keit, -schaft, -ion (die Zeitung, die Freiheit) | <span class="gold">Neuter:</span> -chen, -lein, -um, -ment (das Mädchen, das Zentrum)</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Masculine (der)</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">der Mann</span><span class="trans">man</span></div>
+            <div class="vocab-pill"><span class="word">der Vater</span><span class="trans">father</span></div>
+            <div class="vocab-pill"><span class="word">der Sohn</span><span class="trans">son</span></div>
+            <div class="vocab-pill"><span class="word">der Bruder</span><span class="trans">brother</span></div>
+            <div class="vocab-pill"><span class="word">der Tisch</span><span class="trans">table</span></div>
+            <div class="vocab-pill"><span class="word">der Stuhl</span><span class="trans">chair</span></div>
+            <div class="vocab-pill"><span class="word">der Hund</span><span class="trans">dog</span></div>
+            <div class="vocab-pill"><span class="word">der Computer</span><span class="trans">computer</span></div>
+            <div class="vocab-pill"><span class="word">der Tag</span><span class="trans">day</span></div>
+            <div class="vocab-pill"><span class="word">der Zug</span><span class="trans">train</span></div>
+            <div class="vocab-pill"><span class="word">der Bus</span><span class="trans">bus</span></div>
+            <div class="vocab-pill"><span class="word">der Beruf</span><span class="trans">job</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Feminine (die)</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">die Frau</span><span class="trans">woman</span></div>
+            <div class="vocab-pill"><span class="word">die Mutter</span><span class="trans">mother</span></div>
+            <div class="vocab-pill"><span class="word">die Tochter</span><span class="trans">daughter</span></div>
+            <div class="vocab-pill"><span class="word">die Schwester</span><span class="trans">sister</span></div>
+            <div class="vocab-pill"><span class="word">die Stadt</span><span class="trans">city</span></div>
+            <div class="vocab-pill"><span class="word">die Straße</span><span class="trans">street</span></div>
+            <div class="vocab-pill"><span class="word">die Katze</span><span class="trans">cat</span></div>
+            <div class="vocab-pill"><span class="word">die Schule</span><span class="trans">school</span></div>
+            <div class="vocab-pill"><span class="word">die Arbeit</span><span class="trans">work</span></div>
+            <div class="vocab-pill"><span class="word">die Zeit</span><span class="trans">time</span></div>
+            <div class="vocab-pill"><span class="word">die Zeitung</span><span class="trans">newspaper</span></div>
+            <div class="vocab-pill"><span class="word">die Wohnung</span><span class="trans">apartment</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Neuter (das)</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">das Kind</span><span class="trans">child</span></div>
+            <div class="vocab-pill"><span class="word">das Mädchen</span><span class="trans">girl</span></div>
+            <div class="vocab-pill"><span class="word">das Buch</span><span class="trans">book</span></div>
+            <div class="vocab-pill"><span class="word">das Haus</span><span class="trans">house</span></div>
+            <div class="vocab-pill"><span class="word">das Auto</span><span class="trans">car</span></div>
+            <div class="vocab-pill"><span class="word">das Wasser</span><span class="trans">water</span></div>
+            <div class="vocab-pill"><span class="word">das Brot</span><span class="trans">bread</span></div>
+            <div class="vocab-pill"><span class="word">das Geld</span><span class="trans">money</span></div>
+            <div class="vocab-pill"><span class="word">das Jahr</span><span class="trans">year</span></div>
+            <div class="vocab-pill"><span class="word">das Land</span><span class="trans">country</span></div>
+            <div class="vocab-pill"><span class="word">das Zimmer</span><span class="trans">room</span></div>
+            <div class="vocab-pill"><span class="word">das Fenster</span><span class="trans">window</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Personal Pronouns -->
+    <div class="topic-block red-border fade-in">
+      <h3>5. Personal Pronouns (Personalpronomen)</h3>
+      <table class="ex-table">
+        <tr><th>Pronoun</th><th>German</th><th>Example</th><th>Translation</th></tr>
+        <tr><td>I</td><td class="de">ich</td><td class="de">Ich lerne Deutsch.</td><td class="en">I learn German.</td></tr>
+        <tr><td>you (informal)</td><td class="de">du</td><td class="de">Du sprichst gut.</td><td class="en">You speak well.</td></tr>
+        <tr><td>he</td><td class="de">er</td><td class="de">Er kommt aus Berlin.</td><td class="en">He comes from Berlin.</td></tr>
+        <tr><td>she</td><td class="de">sie</td><td class="de">Sie wohnt in Mitte.</td><td class="en">She lives in Mitte.</td></tr>
+        <tr><td>it</td><td class="de">es</td><td class="de">Es ist schön.</td><td class="en">It is beautiful.</td></tr>
+        <tr><td>we</td><td class="de">wir</td><td class="de">Wir gehen ins Kino.</td><td class="en">We're going to the cinema.</td></tr>
+        <tr><td>you (plural informal)</td><td class="de">ihr</td><td class="de">Ihr seid meine Freunde.</td><td class="en">You are my friends.</td></tr>
+        <tr><td>they / you (formal)</td><td class="de">sie / Sie</td><td class="de">Sie haben einen Termin.</td><td class="en">They/You have an appointment.</td></tr>
+      </table>
+      <div class="warn-box">
+        <span style="font-size:1.2rem">⚠️</span>
+        <p><strong>Critical:</strong> <em>Sie</em> (capital S) is the formal "you" — used with strangers, officials, older people. <em>sie</em> (small s) means "she" or "they". Context makes it clear.</p>
+      </div>
+    </div>
+
+    <!-- 6. Present Tense (Präsens) -->
+    <div class="topic-block red-border fade-in">
+      <h3>6. Present Tense (Präsens) — Regular Verbs</h3>
+      <div class="grammar-box">
+        <h4>Regular Verb Conjugation Pattern</h4>
+        <div class="formula">Verb Stem = Infinitive – en → mach- (from machen)</div>
+        <div class="formula">ich mach<strong>e</strong> · du mach<strong>st</strong> · er/sie/es mach<strong>t</strong> · wir mach<strong>en</strong> · ihr mach<strong>t</strong> · sie/Sie mach<strong>en</strong></div>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>machen — to do/make</h3>
+          <table class="conj-table">
+            <tr><th>Person</th><th>Form</th></tr>
+            <tr><td>ich</td><td class="highlight">mache</td></tr>
+            <tr><td>du</td><td class="highlight">machst</td></tr>
+            <tr><td>er/sie/es</td><td class="highlight">macht</td></tr>
+            <tr><td>wir</td><td class="highlight">machen</td></tr>
+            <tr><td>ihr</td><td class="highlight">macht</td></tr>
+            <tr><td>sie/Sie</td><td class="highlight">machen</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>arbeiten — to work</h3>
+          <table class="conj-table">
+            <tr><th>Person</th><th>Form</th></tr>
+            <tr><td>ich</td><td class="highlight">arbeite</td></tr>
+            <tr><td>du</td><td class="highlight">arbeitest</td></tr>
+            <tr><td>er/sie/es</td><td class="highlight">arbeitet</td></tr>
+            <tr><td>wir</td><td class="highlight">arbeiten</td></tr>
+            <tr><td>ihr</td><td class="highlight">arbeitet</td></tr>
+            <tr><td>sie/Sie</td><td class="highlight">arbeiten</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Irregular: sein — to be</h3>
+          <table class="conj-table">
+            <tr><th>Person</th><th>Form</th></tr>
+            <tr><td>ich</td><td class="highlight">bin</td></tr>
+            <tr><td>du</td><td class="highlight">bist</td></tr>
+            <tr><td>er/sie/es</td><td class="highlight">ist</td></tr>
+            <tr><td>wir</td><td class="highlight">sind</td></tr>
+            <tr><td>ihr</td><td class="highlight">seid</td></tr>
+            <tr><td>sie/Sie</td><td class="highlight">sind</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Irregular: haben — to have</h3>
+          <table class="conj-table">
+            <tr><th>Person</th><th>Form</th></tr>
+            <tr><td>ich</td><td class="highlight">habe</td></tr>
+            <tr><td>du</td><td class="highlight">hast</td></tr>
+            <tr><td>er/sie/es</td><td class="highlight">hat</td></tr>
+            <tr><td>wir</td><td class="highlight">haben</td></tr>
+            <tr><td>ihr</td><td class="highlight">habt</td></tr>
+            <tr><td>sie/Sie</td><td class="highlight">haben</td></tr>
+          </table>
+        </div>
+      </div>
+      <!-- More irregular verbs -->
+      <h4 style="color:var(--gold);margin:20px 0 12px;font-family:'DM Mono',monospace;font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;">Important Irregular Verbs at A1</h4>
+      <table class="ex-table">
+        <tr><th>Infinitive</th><th>ich</th><th>du</th><th>er/sie/es</th><th>Meaning</th></tr>
+        <tr><td class="de">fahren</td><td class="de">fahre</td><td class="de">fährst</td><td class="de">fährt</td><td class="en">to drive/travel</td></tr>
+        <tr><td class="de">gehen</td><td class="de">gehe</td><td class="de">gehst</td><td class="de">geht</td><td class="en">to go</td></tr>
+        <tr><td class="de">kommen</td><td class="de">komme</td><td class="de">kommst</td><td class="de">kommt</td><td class="en">to come</td></tr>
+        <tr><td class="de">sprechen</td><td class="de">spreche</td><td class="de">sprichst</td><td class="de">spricht</td><td class="en">to speak</td></tr>
+        <tr><td class="de">lesen</td><td class="de">lese</td><td class="de">liest</td><td class="de">liest</td><td class="en">to read</td></tr>
+        <tr><td class="de">sehen</td><td class="de">sehe</td><td class="de">siehst</td><td class="de">sieht</td><td class="en">to see</td></tr>
+        <tr><td class="de">nehmen</td><td class="de">nehme</td><td class="de">nimmst</td><td class="de">nimmt</td><td class="en">to take</td></tr>
+        <tr><td class="de">essen</td><td class="de">esse</td><td class="de">isst</td><td class="de">isst</td><td class="en">to eat</td></tr>
+        <tr><td class="de">trinken</td><td class="de">trinke</td><td class="de">trinkst</td><td class="de">trinkt</td><td class="en">to drink</td></tr>
+        <tr><td class="de">schlafen</td><td class="de">schlafe</td><td class="de">schläfst</td><td class="de">schläft</td><td class="en">to sleep</td></tr>
+        <tr><td class="de">laufen</td><td class="de">laufe</td><td class="de">läufst</td><td class="de">läuft</td><td class="en">to run/walk</td></tr>
+        <tr><td class="de">wissen</td><td class="de">weiß</td><td class="de">weißt</td><td class="de">weiß</td><td class="en">to know (facts)</td></tr>
+      </table>
+    </div>
+
+    <!-- 7. Time & Days -->
+    <div class="topic-block red-border fade-in">
+      <h3>7. Time, Days & Months</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Days of the Week</h3>
+          <table class="ex-table">
+            <tr><td class="de">Montag</td><td class="en">Monday</td></tr>
+            <tr><td class="de">Dienstag</td><td class="en">Tuesday</td></tr>
+            <tr><td class="de">Mittwoch</td><td class="en">Wednesday</td></tr>
+            <tr><td class="de">Donnerstag</td><td class="en">Thursday</td></tr>
+            <tr><td class="de">Freitag</td><td class="en">Friday</td></tr>
+            <tr><td class="de">Samstag</td><td class="en">Saturday</td></tr>
+            <tr><td class="de">Sonntag</td><td class="en">Sunday</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Months</h3>
+          <table class="ex-table">
+            <tr><td class="de">Januar</td><td class="de">Juli</td></tr>
+            <tr><td class="de">Februar</td><td class="de">August</td></tr>
+            <tr><td class="de">März</td><td class="de">September</td></tr>
+            <tr><td class="de">April</td><td class="de">Oktober</td></tr>
+            <tr><td class="de">Mai</td><td class="de">November</td></tr>
+            <tr><td class="de">Juni</td><td class="de">Dezember</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Telling the Time</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">Es ist ein Uhr.</td><td class="en">It's 1 o'clock.</td></tr>
+            <tr><td class="de">Es ist halb drei.</td><td class="en">It's 2:30.</td></tr>
+            <tr><td class="de">Es ist Viertel nach vier.</td><td class="en">It's 4:15.</td></tr>
+            <tr><td class="de">Es ist Viertel vor fünf.</td><td class="en">It's 4:45.</td></tr>
+            <tr><td class="de">Es ist zehn nach sechs.</td><td class="en">It's 6:10.</td></tr>
+            <tr><td class="de">Es ist zwanzig vor acht.</td><td class="en">It's 7:40.</td></tr>
+          </table>
+          <div class="warn-box" style="margin-top:10px">
+            <span>⚠️</span>
+            <p><strong>halb:</strong> "halb drei" = half-to-three = 2:30, NOT 3:30!</p>
+          </div>
+        </div>
+      </div>
+      <table class="ex-table mt24">
+        <tr><th>Time Expression</th><th>German</th><th>Example Sentence</th></tr>
+        <tr><td>today</td><td class="de">heute</td><td class="de">Heute lerne ich Deutsch.</td></tr>
+        <tr><td>tomorrow</td><td class="de">morgen</td><td class="de">Morgen habe ich einen Termin.</td></tr>
+        <tr><td>yesterday</td><td class="de">gestern</td><td class="de">Gestern war ich in Berlin.</td></tr>
+        <tr><td>now</td><td class="de">jetzt</td><td class="de">Jetzt esse ich.</td></tr>
+        <tr><td>soon</td><td class="de">bald</td><td class="de">Der Bus kommt bald.</td></tr>
+        <tr><td>always</td><td class="de">immer</td><td class="de">Ich trinke immer Kaffee.</td></tr>
+        <tr><td>never</td><td class="de">nie</td><td class="de">Ich rauche nie.</td></tr>
+        <tr><td>often</td><td class="de">oft</td><td class="de">Ich gehe oft spazieren.</td></tr>
+        <tr><td>sometimes</td><td class="de">manchmal</td><td class="de">Manchmal koche ich.</td></tr>
+        <tr><td>in the morning</td><td class="de">morgens / am Morgen</td><td class="de">Morgens trinke ich Tee.</td></tr>
+        <tr><td>in the evening</td><td class="de">abends / am Abend</td><td class="de">Am Abend lese ich.</td></tr>
+      </table>
+    </div>
+
+    <!-- 8. A1 Vocabulary Themes -->
+    <div class="topic-block red-border fade-in">
+      <h3>8. Core A1 Vocabulary Themes</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>👨‍👩‍👧 Family</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">die Familie</span><span class="trans">family</span></div>
+            <div class="vocab-pill"><span class="word">der Vater</span><span class="trans">father</span></div>
+            <div class="vocab-pill"><span class="word">die Mutter</span><span class="trans">mother</span></div>
+            <div class="vocab-pill"><span class="word">der Sohn</span><span class="trans">son</span></div>
+            <div class="vocab-pill"><span class="word">die Tochter</span><span class="trans">daughter</span></div>
+            <div class="vocab-pill"><span class="word">der Bruder</span><span class="trans">brother</span></div>
+            <div class="vocab-pill"><span class="word">die Schwester</span><span class="trans">sister</span></div>
+            <div class="vocab-pill"><span class="word">der Großvater</span><span class="trans">grandfather</span></div>
+            <div class="vocab-pill"><span class="word">die Großmutter</span><span class="trans">grandmother</span></div>
+            <div class="vocab-pill"><span class="word">der Onkel</span><span class="trans">uncle</span></div>
+            <div class="vocab-pill"><span class="word">die Tante</span><span class="trans">aunt</span></div>
+            <div class="vocab-pill"><span class="word">der Cousin</span><span class="trans">cousin (m)</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🏠 Home & Rooms</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">das Haus</span><span class="trans">house</span></div>
+            <div class="vocab-pill"><span class="word">die Wohnung</span><span class="trans">apartment</span></div>
+            <div class="vocab-pill"><span class="word">das Zimmer</span><span class="trans">room</span></div>
+            <div class="vocab-pill"><span class="word">die Küche</span><span class="trans">kitchen</span></div>
+            <div class="vocab-pill"><span class="word">das Badezimmer</span><span class="trans">bathroom</span></div>
+            <div class="vocab-pill"><span class="word">das Schlafzimmer</span><span class="trans">bedroom</span></div>
+            <div class="vocab-pill"><span class="word">das Wohnzimmer</span><span class="trans">living room</span></div>
+            <div class="vocab-pill"><span class="word">der Garten</span><span class="trans">garden</span></div>
+            <div class="vocab-pill"><span class="word">der Keller</span><span class="trans">basement</span></div>
+            <div class="vocab-pill"><span class="word">der Balkon</span><span class="trans">balcony</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🍎 Food & Drink</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">das Brot</span><span class="trans">bread</span></div>
+            <div class="vocab-pill"><span class="word">die Butter</span><span class="trans">butter</span></div>
+            <div class="vocab-pill"><span class="word">der Käse</span><span class="trans">cheese</span></div>
+            <div class="vocab-pill"><span class="word">das Fleisch</span><span class="trans">meat</span></div>
+            <div class="vocab-pill"><span class="word">der Fisch</span><span class="trans">fish</span></div>
+            <div class="vocab-pill"><span class="word">das Gemüse</span><span class="trans">vegetables</span></div>
+            <div class="vocab-pill"><span class="word">das Obst</span><span class="trans">fruit</span></div>
+            <div class="vocab-pill"><span class="word">der Kaffee</span><span class="trans">coffee</span></div>
+            <div class="vocab-pill"><span class="word">der Tee</span><span class="trans">tea</span></div>
+            <div class="vocab-pill"><span class="word">das Wasser</span><span class="trans">water</span></div>
+            <div class="vocab-pill"><span class="word">das Bier</span><span class="trans">beer</span></div>
+            <div class="vocab-pill"><span class="word">der Wein</span><span class="trans">wine</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🚗 Transport</h3>
+          <div class="vocab-grid">
+            <div class="vocab-pill"><span class="word">der Bus</span><span class="trans">bus</span></div>
+            <div class="vocab-pill"><span class="word">die U-Bahn</span><span class="trans">metro/subway</span></div>
+            <div class="vocab-pill"><span class="word">die S-Bahn</span><span class="trans">city train</span></div>
+            <div class="vocab-pill"><span class="word">der Zug</span><span class="trans">train</span></div>
+            <div class="vocab-pill"><span class="word">das Flugzeug</span><span class="trans">airplane</span></div>
+            <div class="vocab-pill"><span class="word">das Auto</span><span class="trans">car</span></div>
+            <div class="vocab-pill"><span class="word">das Fahrrad</span><span class="trans">bicycle</span></div>
+            <div class="vocab-pill"><span class="word">das Taxi</span><span class="trans">taxi</span></div>
+            <div class="vocab-pill"><span class="word">die Straßenbahn</span><span class="trans">tram</span></div>
+            <div class="vocab-pill"><span class="word">zu Fuß</span><span class="trans">on foot</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A1 Dialogue: At the Doctor -->
+    <div class="dialogue fade-in">
+      <div class="dialogue-title">🎭 Dialogue 2: Beim Arzt — At the Doctor (Berlin context)</div>
+      <div class="dialogue-line">
+        <span class="speaker b">Arzt:</span>
+        <div><div class="line-text">Guten Morgen. Was kann ich für Sie tun?</div><div class="line-trans">Good morning. What can I do for you?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Patient:</span>
+        <div><div class="line-text">Guten Morgen, Doktor. Ich habe Kopfschmerzen und Fieber.</div><div class="line-trans">Good morning, Doctor. I have a headache and fever.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Arzt:</span>
+        <div><div class="line-text">Seit wann haben Sie Fieber?</div><div class="line-trans">Since when have you had a fever?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Patient:</span>
+        <div><div class="line-text">Seit gestern Abend. Ich habe auch Halsschmerzen.</div><div class="line-trans">Since yesterday evening. I also have a sore throat.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Arzt:</span>
+        <div><div class="line-text">Ich schreibe Ihnen ein Rezept. Kaufen Sie das in der Apotheke.</div><div class="line-trans">I'll write you a prescription. Get it at the pharmacy.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ A2 ══════════════════════ -->
+<section class="section" id="a2" style="background:rgba(230,126,34,0.02)">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">A2</div>
+      <div class="section-title-group">
+        <div class="level-pill badge-a2">Elementary · Grundstufe</div>
+        <h2>A2 — Building Fluency</h2>
+        <p>Past tenses, modals, shopping, travel, appointments — daily life in German</p>
+      </div>
+    </div>
+
+    <!-- Past Tense Perfekt -->
+    <div class="topic-block orange-border fade-in">
+      <h3>1. The Perfect Tense (Perfekt) — Talking about the Past</h3>
+      <div class="grammar-box">
+        <h4>⚡ Perfekt Formula</h4>
+        <div class="formula">haben/sein (present) + Partizip II (past participle) at the END</div>
+        <div class="formula">Ich <strong>habe</strong> gestern Kaffee <strong>getrunken</strong>. — I drank coffee yesterday.</div>
+        <div class="formula">Ich <strong>bin</strong> nach Berlin <strong>gefahren</strong>. — I went to Berlin.</div>
+      </div>
+      <div class="tip-box">
+        <div class="tip-icon">🧠</div>
+        <p><strong>haben vs sein:</strong> Use <em>sein</em> with verbs of motion/change of state (gehen, fahren, kommen, laufen, fliegen, werden, bleiben, sein). Everything else takes <em>haben</em>.</p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Partizip II Formation</h4>
+      <table class="ex-table">
+        <tr><th>Verb type</th><th>Pattern</th><th>Examples</th></tr>
+        <tr><td>Regular (weak)</td><td class="de">ge- + stem + -t</td><td class="de">machen → gemacht · kaufen → gekauft · spielen → gespielt · wohnen → gewohnt · lernen → gelernt</td></tr>
+        <tr><td>Irregular (strong)</td><td class="de">ge- + changed stem + -en</td><td class="de">trinken → getrunken · fahren → gefahren · sehen → gesehen · schreiben → geschrieben</td></tr>
+        <tr><td>Mixed</td><td class="de">ge- + stem + -t (with vowel change)</td><td class="de">bringen → gebracht · denken → gedacht · kennen → gekannt</td></tr>
+        <tr><td>Verbs with -ieren</td><td class="de">stem + -iert (no ge-)</td><td class="de">studieren → studiert · passieren → passiert · telefonieren → telefoniert</td></tr>
+        <tr><td>Inseparable prefix verbs</td><td class="de">no ge- prefix</td><td class="de">besuchen → besucht · erklären → erklärt · verstehen → verstanden</td></tr>
+        <tr><td>Separable prefix verbs</td><td class="de">prefix + ge + stem</td><td class="de">aufmachen → aufgemacht · einkaufen → eingekauft · anrufen → angerufen</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">50 Key Partizip II Forms</h4>
+      <table class="ex-table">
+        <tr><th>Infinitive</th><th>Partizip II</th><th>English</th><th>Infinitive</th><th>Partizip II</th><th>English</th></tr>
+        <tr><td class="de">sein</td><td class="de">gewesen</td><td class="en">been</td><td class="de">haben</td><td class="de">gehabt</td><td class="en">had</td></tr>
+        <tr><td class="de">gehen</td><td class="de">gegangen</td><td class="en">gone</td><td class="de">kommen</td><td class="de">gekommen</td><td class="en">come</td></tr>
+        <tr><td class="de">fahren</td><td class="de">gefahren</td><td class="en">driven</td><td class="de">fliegen</td><td class="de">geflogen</td><td class="en">flown</td></tr>
+        <tr><td class="de">essen</td><td class="de">gegessen</td><td class="en">eaten</td><td class="de">trinken</td><td class="de">getrunken</td><td class="en">drunk</td></tr>
+        <tr><td class="de">schreiben</td><td class="de">geschrieben</td><td class="en">written</td><td class="de">lesen</td><td class="de">gelesen</td><td class="en">read</td></tr>
+        <tr><td class="de">sehen</td><td class="de">gesehen</td><td class="en">seen</td><td class="de">sprechen</td><td class="de">gesprochen</td><td class="en">spoken</td></tr>
+        <tr><td class="de">finden</td><td class="de">gefunden</td><td class="en">found</td><td class="de">nehmen</td><td class="de">genommen</td><td class="en">taken</td></tr>
+        <tr><td class="de">schlafen</td><td class="de">geschlafen</td><td class="en">slept</td><td class="de">laufen</td><td class="de">gelaufen</td><td class="en">run</td></tr>
+        <tr><td class="de">kaufen</td><td class="de">gekauft</td><td class="en">bought</td><td class="de">machen</td><td class="de">gemacht</td><td class="en">done</td></tr>
+        <tr><td class="de">denken</td><td class="de">gedacht</td><td class="en">thought</td><td class="de">bringen</td><td class="de">gebracht</td><td class="en">brought</td></tr>
+        <tr><td class="de">helfen</td><td class="de">geholfen</td><td class="en">helped</td><td class="de">geben</td><td class="de">gegeben</td><td class="en">given</td></tr>
+        <tr><td class="de">beginnen</td><td class="de">begonnen</td><td class="en">begun</td><td class="de">verlieren</td><td class="de">verloren</td><td class="en">lost</td></tr>
+        <tr><td class="de">bleiben</td><td class="de">geblieben</td><td class="en">stayed</td><td class="de">wissen</td><td class="de">gewusst</td><td class="en">known</td></tr>
+      </table>
+    </div>
+
+    <!-- Modal Verbs -->
+    <div class="topic-block orange-border fade-in">
+      <h3>2. Modal Verbs (Modalverben) — Must / Can / Want / Should</h3>
+      <div class="grammar-box">
+        <h4>⚡ Modal Verb Sentence Structure</h4>
+        <div class="formula">Subject + Modal Verb (conjugated) + ... + Infinitive (at END)</div>
+        <div class="formula">Ich <strong>muss</strong> morgen früh <strong>aufstehen</strong>. — I must get up early tomorrow.</div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Infinitive</th><th>Meaning</th><th>ich</th><th>du</th><th>er/sie/es</th><th>wir/sie/Sie</th></tr>
+        <tr><td class="de">müssen</td><td class="en">must / have to</td><td class="de">muss</td><td class="de">musst</td><td class="de">muss</td><td class="de">müssen</td></tr>
+        <tr><td class="de">können</td><td class="en">can / to be able</td><td class="de">kann</td><td class="de">kannst</td><td class="de">kann</td><td class="de">können</td></tr>
+        <tr><td class="de">wollen</td><td class="en">want to</td><td class="de">will</td><td class="de">willst</td><td class="de">will</td><td class="de">wollen</td></tr>
+        <tr><td class="de">sollen</td><td class="en">should / supposed to</td><td class="de">soll</td><td class="de">sollst</td><td class="de">soll</td><td class="de">sollen</td></tr>
+        <tr><td class="de">dürfen</td><td class="en">may / allowed to</td><td class="de">darf</td><td class="de">darfst</td><td class="de">darf</td><td class="de">dürfen</td></tr>
+        <tr><td class="de">mögen</td><td class="en">to like</td><td class="de">mag</td><td class="de">magst</td><td class="de">mag</td><td class="de">mögen</td></tr>
+        <tr><td class="de">möchten</td><td class="en">would like to</td><td class="de">möchte</td><td class="de">möchtest</td><td class="de">möchte</td><td class="de">möchten</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Modal Verb Examples</h4>
+      <table class="ex-table">
+        <tr><th>German</th><th>English</th></tr>
+        <tr><td class="de">Ich <strong>muss</strong> heute zum Amt <strong>gehen</strong>.</td><td class="en">I have to go to the office today.</td></tr>
+        <tr><td class="de">Ich <strong>kann</strong> gut Deutsch <strong>sprechen</strong>.</td><td class="en">I can speak German well.</td></tr>
+        <tr><td class="de">Er <strong>will</strong> in Berlin <strong>wohnen</strong>.</td><td class="en">He wants to live in Berlin.</td></tr>
+        <tr><td class="de">Du <strong>sollst</strong> pünktlich <strong>kommen</strong>.</td><td class="en">You should come on time.</td></tr>
+        <tr><td class="de">Hier <strong>darf</strong> man nicht <strong>rauchen</strong>.</td><td class="en">One may not smoke here.</td></tr>
+        <tr><td class="de">Ich <strong>möchte</strong> einen Kaffee <strong>bestellen</strong>.</td><td class="en">I would like to order a coffee.</td></tr>
+        <tr><td class="de">Sie <strong>muss</strong> einen Termin <strong>machen</strong>.</td><td class="en">She has to make an appointment.</td></tr>
+        <tr><td class="de">Wir <strong>können</strong> morgen <strong>kommen</strong>.</td><td class="en">We can come tomorrow.</td></tr>
+        <tr><td class="de">Du <strong>darfst</strong> hier <strong>parken</strong>.</td><td class="en">You are allowed to park here.</td></tr>
+        <tr><td class="de">Ich <strong>will</strong> Deutsch B1 <strong>bestehen</strong>.</td><td class="en">I want to pass German B1.</td></tr>
+      </table>
+    </div>
+
+    <!-- Cases -->
+    <div class="topic-block orange-border fade-in">
+      <h3>3. The Four Cases (Die vier Fälle)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Why Cases Exist</h4>
+        <div class="formula">Nominativ → subject (who/what does the action)</div>
+        <div class="formula">Akkusativ → direct object (what is directly affected)</div>
+        <div class="formula">Dativ → indirect object (to whom / for whom)</div>
+        <div class="formula">Genitiv → possession (whose) — mainly in written German</div>
+      </div>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Definite Article Declension</h4>
+      <table class="conj-table">
+        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+        <tr><td>Nominativ</td><td class="highlight">der</td><td class="highlight">die</td><td class="highlight">das</td><td class="highlight">die</td></tr>
+        <tr><td>Akkusativ</td><td class="highlight">den</td><td class="highlight">die</td><td class="highlight">das</td><td class="highlight">die</td></tr>
+        <tr><td>Dativ</td><td class="highlight">dem</td><td class="highlight">der</td><td class="highlight">dem</td><td class="highlight">den (+n)</td></tr>
+        <tr><td>Genitiv</td><td class="highlight">des (+s)</td><td class="highlight">der</td><td class="highlight">des (+s)</td><td class="highlight">der</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Indefinite Article Declension (ein/eine)</h4>
+      <table class="conj-table">
+        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
+        <tr><td>Nominativ</td><td class="highlight">ein</td><td class="highlight">eine</td><td class="highlight">ein</td></tr>
+        <tr><td>Akkusativ</td><td class="highlight">einen</td><td class="highlight">eine</td><td class="highlight">ein</td></tr>
+        <tr><td>Dativ</td><td class="highlight">einem</td><td class="highlight">einer</td><td class="highlight">einem</td></tr>
+        <tr><td>Genitiv</td><td class="highlight">eines</td><td class="highlight">einer</td><td class="highlight">eines</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Case Examples in Context</h4>
+      <table class="ex-table">
+        <tr><th>Case</th><th>German</th><th>English</th><th>Why?</th></tr>
+        <tr><td>Nom.</td><td class="de"><strong>Der Mann</strong> kauft ein Buch.</td><td class="en">The man buys a book.</td><td class="note">Subject → nominative</td></tr>
+        <tr><td>Akk.</td><td class="de">Ich sehe <strong>den Mann</strong>.</td><td class="en">I see the man.</td><td class="note">Direct object → accusative</td></tr>
+        <tr><td>Dat.</td><td class="de">Ich gebe <strong>dem Mann</strong> das Buch.</td><td class="en">I give the man the book.</td><td class="note">Indirect object → dative</td></tr>
+        <tr><td>Gen.</td><td class="de">Das ist das Buch <strong>des Mannes</strong>.</td><td class="en">That is the man's book.</td><td class="note">Possession → genitive</td></tr>
+        <tr><td>Nom.</td><td class="de"><strong>Die Frau</strong> ist sehr nett.</td><td class="en">The woman is very nice.</td><td class="note">Subject → nominative</td></tr>
+        <tr><td>Akk.</td><td class="de">Er liebt <strong>die Frau</strong>.</td><td class="en">He loves the woman.</td><td class="note">Direct object → accusative</td></tr>
+        <tr><td>Dat.</td><td class="de">Er hilft <strong>der Frau</strong>.</td><td class="en">He helps the woman.</td><td class="note">helfen takes dative!</td></tr>
+      </table>
+      <div class="tip-box">
+        <div class="tip-icon">💡</div>
+        <p><strong>Dative Verbs (always dative object):</strong> helfen (to help), danken (to thank), gefallen (to like/please), gehören (to belong), folgen (to follow), glauben (to believe), antworten (to answer), schaden (to harm)</p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:16px 0 10px;">Prepositions + Fixed Cases</h4>
+      <table class="ex-table">
+        <tr><th>Always Accusative</th><th>Always Dative</th><th>Two-way (Acc/Dat)</th></tr>
+        <tr>
+          <td class="de">durch, für, gegen, ohne, um, bis, entlang, wider</td>
+          <td class="de">aus, bei, mit, nach, seit, von, zu, gegenüber, außer</td>
+          <td class="de">an, auf, hinter, in, neben, über, unter, vor, zwischen</td>
+        </tr>
+        <tr>
+          <td class="en">through, for, against, without, around, until</td>
+          <td class="en">out of, at/near, with, after/to, since, from, to, opposite, except</td>
+          <td class="en">Two-way: movement → Akkusativ; location → Dativ</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- A2 Shopping Dialogue -->
+    <div class="dialogue fade-in">
+      <div class="dialogue-title">🎭 Dialogue 3: Im Supermarkt — At the Supermarket</div>
+      <div class="dialogue-line">
+        <span class="speaker a">Kunde:</span>
+        <div><div class="line-text">Entschuldigung, wo finde ich die Milch?</div><div class="line-trans">Excuse me, where can I find the milk?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Verkäufer:</span>
+        <div><div class="line-text">Die Milch ist im dritten Gang, auf der linken Seite.</div><div class="line-trans">The milk is in the third aisle, on the left side.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Kunde:</span>
+        <div><div class="line-text">Danke. Haben Sie auch Bio-Produkte?</div><div class="line-trans">Thank you. Do you also have organic products?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Verkäufer:</span>
+        <div><div class="line-text">Ja, im hinteren Teil des Geschäfts finden Sie unsere Bio-Abteilung.</div><div class="line-trans">Yes, in the back section of the store you'll find our organic department.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Kunde:</span>
+        <div><div class="line-text">Was kostet das Brot hier?</div><div class="line-trans">How much does the bread here cost?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Kasse:</span>
+        <div><div class="line-text">Das macht zusammen 12 Euro 50. Möchten Sie eine Tüte?</div><div class="line-trans">That comes to 12 euros 50 altogether. Would you like a bag?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Kunde:</span>
+        <div><div class="line-text">Nein danke, ich habe meinen Rucksack dabei. Kann ich mit Karte zahlen?</div><div class="line-trans">No thank you, I have my backpack with me. Can I pay by card?</div></div>
+      </div>
+    </div>
+
+    <!-- A2 Subordinate Clauses -->
+    <div class="topic-block orange-border fade-in">
+      <h3>4. Subordinate Clauses (Nebensätze)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Subordinate Clause Rule</h4>
+        <div class="formula">Main clause + conjunction + ... + verb at END</div>
+        <div class="formula">Ich lerne Deutsch, <strong>weil</strong> ich in Berlin <strong>wohne</strong>.</div>
+        <div class="formula">I learn German <strong>because</strong> I <strong>live</strong> in Berlin.</div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Conjunction</th><th>Meaning</th><th>Example</th></tr>
+        <tr><td class="de">weil</td><td class="en">because</td><td class="de">Ich bin müde, weil ich wenig geschlafen habe.</td></tr>
+        <tr><td class="de">dass</td><td class="en">that</td><td class="de">Ich weiß, dass Berlin schön ist.</td></tr>
+        <tr><td class="de">wenn</td><td class="en">when / if</td><td class="de">Ich rufe an, wenn ich fertig bin.</td></tr>
+        <tr><td class="de">ob</td><td class="en">whether / if</td><td class="de">Ich frage, ob der Zug pünktlich kommt.</td></tr>
+        <tr><td class="de">obwohl</td><td class="en">although</td><td class="de">Er geht arbeiten, obwohl er krank ist.</td></tr>
+        <tr><td class="de">damit</td><td class="en">so that</td><td class="de">Ich lerne, damit ich die Prüfung bestehe.</td></tr>
+        <tr><td class="de">bevor</td><td class="en">before</td><td class="de">Bevor ich schlafe, lese ich Deutsch.</td></tr>
+        <tr><td class="de">nachdem</td><td class="en">after</td><td class="de">Nachdem ich gegessen habe, gehe ich spazieren.</td></tr>
+        <tr><td class="de">während</td><td class="en">while</td><td class="de">Während ich koche, höre ich Musik.</td></tr>
+        <tr><td class="de">bis</td><td class="en">until</td><td class="de">Ich warte, bis du kommst.</td></tr>
+        <tr><td class="de">seit</td><td class="en">since</td><td class="de">Seit ich in Berlin wohne, spreche ich mehr Deutsch.</td></tr>
+        <tr><td class="de">als</td><td class="en">when (past)</td><td class="de">Als ich jung war, lebte ich in der Türkei.</td></tr>
+      </table>
+    </div>
+
+    <!-- A2 Vocabulary Expansion -->
+    <div class="topic-block orange-border fade-in">
+      <h3>5. A2 Vocabulary Expansion — Daily Life in Germany</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>🏥 Health & Body</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">der Kopf</td><td class="en">head</td></tr>
+            <tr><td class="de">der Bauch</td><td class="en">stomach/belly</td></tr>
+            <tr><td class="de">der Rücken</td><td class="en">back</td></tr>
+            <tr><td class="de">die Kopfschmerzen</td><td class="en">headache</td></tr>
+            <tr><td class="de">die Bauchschmerzen</td><td class="en">stomach ache</td></tr>
+            <tr><td class="de">das Fieber</td><td class="en">fever</td></tr>
+            <tr><td class="de">der Husten</td><td class="en">cough</td></tr>
+            <tr><td class="de">der Schnupfen</td><td class="en">runny nose</td></tr>
+            <tr><td class="de">die Apotheke</td><td class="en">pharmacy</td></tr>
+            <tr><td class="de">das Krankenhaus</td><td class="en">hospital</td></tr>
+            <tr><td class="de">das Rezept</td><td class="en">prescription/recipe</td></tr>
+            <tr><td class="de">die Krankenkasse</td><td class="en">health insurance</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>💼 Work & Professions</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">der Arzt / die Ärztin</td><td class="en">doctor (m/f)</td></tr>
+            <tr><td class="de">der Lehrer / die Lehrerin</td><td class="en">teacher (m/f)</td></tr>
+            <tr><td class="de">der Ingenieur</td><td class="en">engineer</td></tr>
+            <tr><td class="de">der Koch / die Köchin</td><td class="en">cook/chef (m/f)</td></tr>
+            <tr><td class="de">der Verkäufer</td><td class="en">salesperson</td></tr>
+            <tr><td class="de">der Mechaniker</td><td class="en">mechanic</td></tr>
+            <tr><td class="de">die Stelle</td><td class="en">position/job</td></tr>
+            <tr><td class="de">der Arbeitsplatz</td><td class="en">workplace</td></tr>
+            <tr><td class="de">das Gehalt</td><td class="en">salary</td></tr>
+            <tr><td class="de">die Arbeitszeit</td><td class="en">working hours</td></tr>
+            <tr><td class="de">der Urlaub</td><td class="en">vacation/leave</td></tr>
+            <tr><td class="de">der Chef / die Chefin</td><td class="en">boss (m/f)</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>🏛️ Berlin Life</h3>
+          <table class="ex-table">
+            <tr><th>German</th><th>English</th></tr>
+            <tr><td class="de">das Amt</td><td class="en">government office</td></tr>
+            <tr><td class="de">das Bürgeramt</td><td class="en">citizen's registration office</td></tr>
+            <tr><td class="de">die Anmeldung</td><td class="en">registration</td></tr>
+            <tr><td class="de">der Personalausweis</td><td class="en">ID card</td></tr>
+            <tr><td class="de">der Aufenthaltstitel</td><td class="en">residence permit</td></tr>
+            <tr><td class="de">die Ausländerbehörde</td><td class="en">immigration office</td></tr>
+            <tr><td class="de">der Termin</td><td class="en">appointment</td></tr>
+            <tr><td class="de">das Formular</td><td class="en">form</td></tr>
+            <tr><td class="de">der Bezirk</td><td class="en">district (e.g. Mitte, Kreuzberg)</td></tr>
+            <tr><td class="de">die Hauptstadt</td><td class="en">capital city</td></tr>
+            <tr><td class="de">das Jobcenter</td><td class="en">job center</td></tr>
+            <tr><td class="de">die Integrationsklasse</td><td class="en">integration class</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- A2 Dialogue: Appointment at the Bürgeramt -->
+    <div class="dialogue fade-in">
+      <div class="dialogue-title">🎭 Dialogue 4: Beim Bürgeramt — At the Registration Office (Berlin)</div>
+      <div class="dialogue-line">
+        <span class="speaker a">Person:</span>
+        <div><div class="line-text">Guten Tag. Ich möchte mich anmelden. Ich bin neu in Berlin.</div><div class="line-trans">Good day. I would like to register. I am new in Berlin.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Beamtin:</span>
+        <div><div class="line-text">Haben Sie einen Termin?</div><div class="line-trans">Do you have an appointment?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Person:</span>
+        <div><div class="line-text">Ja, ich habe einen Termin um 10:30 Uhr. Mein Name ist Yilmaz.</div><div class="line-trans">Yes, I have an appointment at 10:30. My name is Yilmaz.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Beamtin:</span>
+        <div><div class="line-text">Bitte zeigen Sie mir Ihren Reisepass und Ihre Wohnungsgeberbestätigung.</div><div class="line-trans">Please show me your passport and your landlord's confirmation of residence.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Person:</span>
+        <div><div class="line-text">Hier bitte. Muss ich noch ein Formular ausfüllen?</div><div class="line-trans">Here please. Do I still need to fill out a form?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Beamtin:</span>
+        <div><div class="line-text">Ja, füllen Sie dieses Formular aus und warten Sie bitte im Wartezimmer.</div><div class="line-trans">Yes, fill out this form and please wait in the waiting room.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">Person:</span>
+        <div><div class="line-text">Wie lange dauert das ungefähr?</div><div class="line-trans">How long does it take approximately?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">Beamtin:</span>
+        <div><div class="line-text">Ungefähr 20 bis 30 Minuten. Sie bekommen Ihren Meldeschein am Ende.</div><div class="line-trans">Approximately 20 to 30 minutes. You will receive your registration certificate at the end.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ B1 ══════════════════════ -->
+<section class="section" id="b1" style="background:rgba(37,99,168,0.03)">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">B1</div>
+      <div class="section-title-group">
+        <div class="level-pill badge-b1">Intermediate · Mittelstufe</div>
+        <h2>B1 — Threshold Level</h2>
+        <p>Complex grammar, opinions, Konjunktiv, passive voice — exam-level competency</p>
+      </div>
+    </div>
+
+    <!-- Konjunktiv II -->
+    <div class="topic-block blue-border fade-in">
+      <h3>1. Konjunktiv II — Wishes, Politeness & Hypotheticals</h3>
+      <div class="grammar-box">
+        <h4>⚡ Why You Need Konjunktiv II</h4>
+        <div class="formula">Polite requests: Könnten Sie mir helfen? (Could you help me?)</div>
+        <div class="formula">Wishes: Ich würde gern in Berlin bleiben. (I would like to stay in Berlin.)</div>
+        <div class="formula">Hypotheticals: Wenn ich mehr Zeit hätte, würde ich mehr lernen.</div>
+      </div>
+      <h4 style="color:#7ab3e8;margin:16px 0 10px;">würde + Infinitiv (Most common construction)</h4>
+      <table class="conj-table">
+        <tr><th>Person</th><th>würde</th><th>Example</th></tr>
+        <tr><td>ich</td><td class="highlight">würde</td><td class="de">Ich würde gern Urlaub machen.</td></tr>
+        <tr><td>du</td><td class="highlight">würdest</td><td class="de">Du würdest das gut machen.</td></tr>
+        <tr><td>er/sie/es</td><td class="highlight">würde</td><td class="de">Er würde früher kommen.</td></tr>
+        <tr><td>wir</td><td class="highlight">würden</td><td class="de">Wir würden gern helfen.</td></tr>
+        <tr><td>ihr</td><td class="highlight">würdet</td><td class="de">Ihr würdet das verstehen.</td></tr>
+        <tr><td>sie/Sie</td><td class="highlight">würden</td><td class="de">Sie würden gern bleiben.</td></tr>
+      </table>
+      <h4 style="color:#7ab3e8;margin:16px 0 10px;">Special Konjunktiv II Forms (used directly, without würde)</h4>
+      <table class="ex-table">
+        <tr><th>Verb</th><th>Konjunktiv II</th><th>Example</th><th>Translation</th></tr>
+        <tr><td class="de">sein</td><td class="de">wäre</td><td class="de">Das wäre schön.</td><td class="en">That would be nice.</td></tr>
+        <tr><td class="de">haben</td><td class="de">hätte</td><td class="de">Ich hätte gern mehr Zeit.</td><td class="en">I would like more time.</td></tr>
+        <tr><td class="de">können</td><td class="de">könnte</td><td class="de">Könnten Sie mir helfen?</td><td class="en">Could you help me?</td></tr>
+        <tr><td class="de">müssen</td><td class="de">müsste</td><td class="de">Er müsste früher kommen.</td><td class="en">He should come earlier.</td></tr>
+        <tr><td class="de">dürfen</td><td class="de">dürfte</td><td class="de">Das dürfte nicht lange dauern.</td><td class="en">That shouldn't take long.</td></tr>
+        <tr><td class="de">sollen</td><td class="de">sollte</td><td class="de">Sie sollten mehr trinken.</td><td class="en">You should drink more.</td></tr>
+        <tr><td class="de">wollen</td><td class="de">wollte</td><td class="de">Ich wollte fragen ob...</td><td class="en">I wanted to ask whether...</td></tr>
+        <tr><td class="de">werden</td><td class="de">würde</td><td class="de">Ich würde gehen.</td><td class="en">I would go.</td></tr>
+      </table>
+      <h4 style="color:#7ab3e8;margin:16px 0 10px;">Wenn-clauses (Conditional Sentences)</h4>
+      <table class="ex-table">
+        <tr><th>German</th><th>English</th></tr>
+        <tr><td class="de">Wenn ich mehr Geld hätte, würde ich ein Haus kaufen.</td><td class="en">If I had more money, I would buy a house.</td></tr>
+        <tr><td class="de">Wenn ich in Deutschland geboren wäre, könnte ich leichter Deutsch lernen.</td><td class="en">If I had been born in Germany, I could learn German more easily.</td></tr>
+        <tr><td class="de">Wenn das Wetter schöner wäre, würden wir spazieren gehen.</td><td class="en">If the weather were nicer, we would go for a walk.</td></tr>
+        <tr><td class="de">Wenn ich Zeit hätte, würde ich dich besuchen.</td><td class="en">If I had time, I would visit you.</td></tr>
+        <tr><td class="de">Wenn ich Arzt wäre, würde ich mehr helfen können.</td><td class="en">If I were a doctor, I could help more.</td></tr>
+      </table>
+    </div>
+
+    <!-- Passive Voice -->
+    <div class="topic-block blue-border fade-in">
+      <h3>2. Passive Voice (Passiv)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Passiv Formula</h4>
+        <div class="formula">werden (conjugated) + Partizip II [+ von + agent]</div>
+        <div class="formula">Das Buch <strong>wird</strong> gelesen. — The book is being read.</div>
+        <div class="formula">Der Brief <strong>wurde</strong> geschrieben. — The letter was written.</div>
+      </div>
+      <table class="conj-table" style="max-width:500px">
+        <tr><th>Tense</th><th>Passive Form</th></tr>
+        <tr><td>Present</td><td class="highlight">wird + Partizip II</td></tr>
+        <tr><td>Past (Prät.)</td><td class="highlight">wurde + Partizip II</td></tr>
+        <tr><td>Perfect</td><td class="highlight">ist + Partizip II + worden</td></tr>
+        <tr><td>Future</td><td class="highlight">wird + Partizip II + werden</td></tr>
+      </table>
+      <h4 style="color:#7ab3e8;margin:16px 0 10px;">Passiv Examples</h4>
+      <table class="ex-table">
+        <tr><th>Active</th><th>Passive</th></tr>
+        <tr><td class="de">Man spricht hier Deutsch.</td><td class="de">Hier wird Deutsch gesprochen.</td></tr>
+        <tr><td class="de">Der Arzt untersucht den Patienten.</td><td class="de">Der Patient wird vom Arzt untersucht.</td></tr>
+        <tr><td class="de">Man hat das Haus gebaut.</td><td class="de">Das Haus wurde gebaut.</td></tr>
+        <tr><td class="de">Man öffnet das Museum um 9 Uhr.</td><td class="de">Das Museum wird um 9 Uhr geöffnet.</td></tr>
+        <tr><td class="de">Man muss die Aufgabe erledigen.</td><td class="de">Die Aufgabe muss erledigt werden.</td></tr>
+        <tr><td class="de">Man hat den Antrag bearbeitet.</td><td class="de">Der Antrag ist bearbeitet worden.</td></tr>
+      </table>
+    </div>
+
+    <!-- Relative Clauses -->
+    <div class="topic-block blue-border fade-in">
+      <h3>3. Relative Clauses (Relativsätze)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Relative Clause Structure</h4>
+        <div class="formula">Noun + Relative Pronoun (der/die/das/dem/den/dessen...) + ... + verb at END</div>
+        <div class="formula">Der Mann, <strong>der</strong> dort steht, ist mein Bruder.</div>
+        <div class="formula">The man who is standing there is my brother.</div>
+      </div>
+      <h4 style="color:#7ab3e8;margin:16px 0 10px;">Relative Pronoun Table</h4>
+      <table class="conj-table">
+        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+        <tr><td>Nominativ</td><td class="highlight">der</td><td class="highlight">die</td><td class="highlight">das</td><td class="highlight">die</td></tr>
+        <tr><td>Akkusativ</td><td class="highlight">den</td><td class="highlight">die</td><td class="highlight">das</td><td class="highlight">die</td></tr>
+        <tr><td>Dativ</td><td class="highlight">dem</td><td class="highlight">der</td><td class="highlight">dem</td><td class="highlight">denen</td></tr>
+        <tr><td>Genitiv</td><td class="highlight">dessen</td><td class="highlight">deren</td><td class="highlight">dessen</td><td class="highlight">deren</td></tr>
+      </table>
+      <table class="ex-table mt24">
+        <tr><th>German</th><th>English</th></tr>
+        <tr><td class="de">Das ist der Mann, <strong>der</strong> in Berlin wohnt.</td><td class="en">That is the man who lives in Berlin.</td></tr>
+        <tr><td class="de">Ich kenne die Frau, <strong>die</strong> Deutsch unterrichtet.</td><td class="en">I know the woman who teaches German.</td></tr>
+        <tr><td class="de">Das Buch, <strong>das</strong> ich lese, ist sehr interessant.</td><td class="en">The book that I'm reading is very interesting.</td></tr>
+        <tr><td class="de">Der Mann, <strong>dem</strong> ich geholfen habe, ist krank.</td><td class="en">The man whom I helped is sick.</td></tr>
+        <tr><td class="de">Der Kollege, <strong>dessen</strong> Auto kaputt ist, kommt zu spät.</td><td class="en">The colleague whose car is broken is coming late.</td></tr>
+        <tr><td class="de">Die Kinder, <strong>denen</strong> wir geholfen haben, sind dankbar.</td><td class="en">The children whom we helped are grateful.</td></tr>
+        <tr><td class="de">Das ist die Stadt, in <strong>der</strong> ich geboren bin.</td><td class="en">That is the city in which I was born.</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Expressing Opinions -->
+    <div class="topic-block blue-border fade-in">
+      <h3>4. Expressing Opinions (B1 Speaking & Writing Essential)</h3>
+      <table class="ex-table">
+        <tr><th>Function</th><th>German Phrase</th><th>English</th></tr>
+        <tr><td rowspan="5">Giving opinion</td><td class="de">Ich bin der Meinung, dass...</td><td class="en">I am of the opinion that...</td></tr>
+        <tr><td class="de">Meiner Meinung nach...</td><td class="en">In my opinion...</td></tr>
+        <tr><td class="de">Ich denke / glaube / finde, dass...</td><td class="en">I think / believe / find that...</td></tr>
+        <tr><td class="de">Ich bin überzeugt, dass...</td><td class="en">I am convinced that...</td></tr>
+        <tr><td class="de">Es scheint mir, dass...</td><td class="en">It seems to me that...</td></tr>
+        <tr><td rowspan="4">Agreeing</td><td class="de">Ich stimme zu / Ich stimme Ihnen zu.</td><td class="en">I agree / I agree with you.</td></tr>
+        <tr><td class="de">Das sehe ich genauso.</td><td class="en">I see it the same way.</td></tr>
+        <tr><td class="de">Da haben Sie völlig Recht.</td><td class="en">You are absolutely right.</td></tr>
+        <tr><td class="de">Ich bin ganz Ihrer Meinung.</td><td class="en">I completely agree with you.</td></tr>
+        <tr><td rowspan="4">Disagreeing</td><td class="de">Ich bin anderer Meinung.</td><td class="en">I have a different opinion.</td></tr>
+        <tr><td class="de">Das sehe ich anders.</td><td class="en">I see it differently.</td></tr>
+        <tr><td class="de">Ich bezweifle, dass...</td><td class="en">I doubt that...</td></tr>
+        <tr><td class="de">Das stimmt nicht ganz.</td><td class="en">That's not entirely true.</td></tr>
+        <tr><td rowspan="4">Arguing / Adding</td><td class="de">Außerdem / Darüber hinaus...</td><td class="en">Moreover / In addition...</td></tr>
+        <tr><td class="de">Einerseits... andererseits...</td><td class="en">On one hand... on the other hand...</td></tr>
+        <tr><td class="de">Ein weiterer Grund ist...</td><td class="en">A further reason is...</td></tr>
+        <tr><td class="de">Hinzu kommt, dass...</td><td class="en">Added to that is the fact that...</td></tr>
+        <tr><td rowspan="3">Concluding</td><td class="de">Zusammenfassend kann man sagen...</td><td class="en">In summary, one can say...</td></tr>
+        <tr><td class="de">Insgesamt glaube ich, dass...</td><td class="en">Overall I believe that...</td></tr>
+        <tr><td class="de">Abschließend möchte ich sagen...</td><td class="en">In conclusion, I would like to say...</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Dialogue: Discussion -->
+    <div class="dialogue fade-in">
+      <div class="dialogue-title">🎭 Dialogue 5: Diskussion — Talking About Work in Berlin</div>
+      <div class="dialogue-line">
+        <span class="speaker a">A:</span>
+        <div><div class="line-text">Wie gefällt dir dein neuer Job in Berlin?</div><div class="line-trans">How do you like your new job in Berlin?</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">B:</span>
+        <div><div class="line-text">Ehrlich gesagt ist es anstrengend, weil ich jeden Tag zwei Stunden mit der U-Bahn fahren muss. Aber die Kollegen sind sehr nett und das Gehalt ist besser als bei meiner letzten Stelle.</div><div class="line-trans">Honestly it's exhausting, because I have to travel two hours by metro every day. But the colleagues are very nice and the salary is better than at my last position.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">A:</span>
+        <div><div class="line-text">Hast du schon eine Wohnung in der Nähe gesucht? Das würde vieles einfacher machen.</div><div class="line-trans">Have you already looked for an apartment nearby? That would make a lot of things easier.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">B:</span>
+        <div><div class="line-text">Ja, ich suche seit drei Monaten, aber der Wohnungsmarkt in Berlin ist sehr angespannt. Ich hätte nicht gedacht, dass es so schwierig ist.</div><div class="line-trans">Yes, I've been looking for three months, but the housing market in Berlin is very tight. I hadn't thought it would be so difficult.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker a">A:</span>
+        <div><div class="line-text">Meiner Meinung nach solltest du auch WG-Zimmer in Betracht ziehen. Auf diese Weise wärst du flexibler und könntest Geld sparen.</div><div class="line-trans">In my opinion you should also consider shared flat rooms. That way you would be more flexible and could save money.</div></div>
+      </div>
+      <div class="dialogue-line">
+        <span class="speaker b">B:</span>
+        <div><div class="line-text">Da hast du vielleicht Recht. Ich werde das mal überlegen. Obwohl ich lieber allein wohnen würde, wäre eine WG vielleicht doch eine gute Lösung für den Moment.</div><div class="line-trans">You might be right about that. I'll think about it. Although I'd prefer to live alone, a shared flat might indeed be a good solution for now.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ GRAMMAR HUB ══════════════════════ -->
+<section class="section" id="grammar">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">GR</div>
+      <div class="section-title-group">
+        <div class="level-pill" style="background:rgba(200,168,75,0.1);border:1px solid var(--gold);color:var(--gold)">GRAMMAR</div>
+        <h2>Complete Grammar Reference</h2>
+        <p>All grammar patterns A1–B1 in one place</p>
+      </div>
+    </div>
+
+    <!-- Separable Verbs -->
+    <div class="topic-block fade-in">
+      <h3>Separable Verbs (Trennbare Verben)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Separable Verb Rule</h4>
+        <div class="formula">Prefix goes to END in main clause: Ich rufe dich an. (I'll call you.)</div>
+        <div class="formula">In infinitive with modal: Ich muss dich anrufen.</div>
+        <div class="formula">Partizip II: ge- comes between prefix and stem → angerufen</div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Verb</th><th>Meaning</th><th>Present</th><th>Perfekt</th></tr>
+        <tr><td class="de">anrufen</td><td class="en">to call</td><td class="de">Ich rufe an.</td><td class="de">Ich habe angerufen.</td></tr>
+        <tr><td class="de">aufmachen</td><td class="en">to open</td><td class="de">Er macht auf.</td><td class="de">Er hat aufgemacht.</td></tr>
+        <tr><td class="de">aufstehen</td><td class="en">to get up</td><td class="de">Wir stehen auf.</td><td class="de">Wir sind aufgestanden.</td></tr>
+        <tr><td class="de">einkaufen</td><td class="en">to shop</td><td class="de">Sie kauft ein.</td><td class="de">Sie hat eingekauft.</td></tr>
+        <tr><td class="de">einladen</td><td class="en">to invite</td><td class="de">Er lädt ein.</td><td class="de">Er hat eingeladen.</td></tr>
+        <tr><td class="de">mitbringen</td><td class="en">to bring along</td><td class="de">Du bringst mit.</td><td class="de">Du hast mitgebracht.</td></tr>
+        <tr><td class="de">vorschlagen</td><td class="en">to suggest</td><td class="de">Sie schlägt vor.</td><td class="de">Sie hat vorgeschlagen.</td></tr>
+        <tr><td class="de">zurückkommen</td><td class="en">to come back</td><td class="de">Er kommt zurück.</td><td class="de">Er ist zurückgekommen.</td></tr>
+        <tr><td class="de">abfahren</td><td class="en">to depart</td><td class="de">Der Zug fährt ab.</td><td class="de">Der Zug ist abgefahren.</td></tr>
+        <tr><td class="de">ankommen</td><td class="en">to arrive</td><td class="de">Wir kommen an.</td><td class="de">Wir sind angekommen.</td></tr>
+        <tr><td class="de">fernsehen</td><td class="en">to watch TV</td><td class="de">Ich sehe fern.</td><td class="de">Ich habe ferngesehen.</td></tr>
+        <tr><td class="de">teilnehmen</td><td class="en">to participate</td><td class="de">Er nimmt teil.</td><td class="de">Er hat teilgenommen.</td></tr>
+      </table>
+    </div>
+
+    <!-- Adjective Endings -->
+    <div class="topic-block fade-in">
+      <h3>Adjective Endings (Adjektivdeklination)</h3>
+      <div class="tip-box">
+        <div class="tip-icon">🧠</div>
+        <p><strong>Key Rule:</strong> When an adjective comes BEFORE a noun, it gets an ending. After der/die/das (definite article) use WEAK endings. After ein/eine (indefinite article) use MIXED endings. Without any article use STRONG endings.</p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:12px 0 8px;">After definite article (weak endings)</h4>
+      <table class="conj-table">
+        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+        <tr><td>Nominativ</td><td>der alt<strong>e</strong> Mann</td><td>die alt<strong>e</strong> Frau</td><td>das alt<strong>e</strong> Kind</td><td>die alt<strong>en</strong> Leute</td></tr>
+        <tr><td>Akkusativ</td><td>den alt<strong>en</strong> Mann</td><td>die alt<strong>e</strong> Frau</td><td>das alt<strong>e</strong> Kind</td><td>die alt<strong>en</strong> Leute</td></tr>
+        <tr><td>Dativ</td><td>dem alt<strong>en</strong> Mann</td><td>der alt<strong>en</strong> Frau</td><td>dem alt<strong>en</strong> Kind</td><td>den alt<strong>en</strong> Leuten</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:12px 0 8px;">After indefinite article (mixed endings)</h4>
+      <table class="conj-table">
+        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th></tr>
+        <tr><td>Nominativ</td><td>ein alt<strong>er</strong> Mann</td><td>eine alt<strong>e</strong> Frau</td><td>ein alt<strong>es</strong> Kind</td></tr>
+        <tr><td>Akkusativ</td><td>einen alt<strong>en</strong> Mann</td><td>eine alt<strong>e</strong> Frau</td><td>ein alt<strong>es</strong> Kind</td></tr>
+        <tr><td>Dativ</td><td>einem alt<strong>en</strong> Mann</td><td>einer alt<strong>en</strong> Frau</td><td>einem alt<strong>en</strong> Kind</td></tr>
+      </table>
+    </div>
+
+    <!-- Comparative & Superlative -->
+    <div class="topic-block fade-in">
+      <h3>Comparative & Superlative (Komparativ & Superlativ)</h3>
+      <div class="grammar-box">
+        <h4>⚡ Formation</h4>
+        <div class="formula">Positive: schnell (fast) → Komparativ: schneller → Superlativ: am schnellsten / der schnellste</div>
+      </div>
+      <table class="ex-table">
+        <tr><th>Positive</th><th>Comparative</th><th>Superlative</th><th>English</th></tr>
+        <tr><td class="de">schnell</td><td class="de">schneller</td><td class="de">am schnellsten</td><td class="en">fast / faster / fastest</td></tr>
+        <tr><td class="de">groß</td><td class="de">größer</td><td class="de">am größten</td><td class="en">big / bigger / biggest</td></tr>
+        <tr><td class="de">klein</td><td class="de">kleiner</td><td class="de">am kleinsten</td><td class="en">small / smaller / smallest</td></tr>
+        <tr><td class="de">alt</td><td class="de">älter</td><td class="de">am ältesten</td><td class="en">old / older / oldest</td></tr>
+        <tr><td class="de">jung</td><td class="de">jünger</td><td class="de">am jüngsten</td><td class="en">young / younger / youngest</td></tr>
+        <tr><td class="de">gut</td><td class="de">besser</td><td class="de">am besten</td><td class="en">good / better / best</td></tr>
+        <tr><td class="de">viel</td><td class="de">mehr</td><td class="de">am meisten</td><td class="en">much/many / more / most</td></tr>
+        <tr><td class="de">gern</td><td class="de">lieber</td><td class="de">am liebsten</td><td class="en">gladly / preferably / most of all</td></tr>
+        <tr><td class="de">teuer</td><td class="de">teurer</td><td class="de">am teuersten</td><td class="en">expensive / more expensive / most expensive</td></tr>
+        <tr><td class="de">warm</td><td class="de">wärmer</td><td class="de">am wärmsten</td><td class="en">warm / warmer / warmest</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Comparison Examples</h4>
+      <table class="ex-table">
+        <tr><th>German</th><th>English</th></tr>
+        <tr><td class="de">Berlin ist größer als München.</td><td class="en">Berlin is bigger than Munich.</td></tr>
+        <tr><td class="de">Der Bus ist billiger als das Taxi.</td><td class="en">The bus is cheaper than the taxi.</td></tr>
+        <tr><td class="de">Deutsch ist schwieriger als Englisch, aber leichter als Arabisch.</td><td class="en">German is harder than English, but easier than Arabic.</td></tr>
+        <tr><td class="de">Ich lerne lieber morgens als abends.</td><td class="en">I prefer learning in the morning than in the evening.</td></tr>
+        <tr><td class="de">Das ist das beste Restaurant in Mitte.</td><td class="en">That is the best restaurant in Mitte.</td></tr>
+        <tr><td class="de">So viel wie möglich lernen.</td><td class="en">Learn as much as possible.</td></tr>
+      </table>
+    </div>
+
+    <!-- Präteritum -->
+    <div class="topic-block fade-in">
+      <h3>Präteritum — Simple Past (Written / Formal)</h3>
+      <div class="tip-box">
+        <div class="tip-icon">💡</div>
+        <p><strong>When to use Präteritum:</strong> Written narratives, news, literature, and the verbs <em>sein, haben, werden</em> and modal verbs are always in Präteritum in spoken German too.</p>
+      </div>
+      <table class="ex-table">
+        <tr><th>Verb</th><th>ich</th><th>du</th><th>er/sie/es</th><th>wir</th><th>Meaning</th></tr>
+        <tr><td class="de">sein</td><td class="de">war</td><td class="de">warst</td><td class="de">war</td><td class="de">waren</td><td class="en">was/were</td></tr>
+        <tr><td class="de">haben</td><td class="de">hatte</td><td class="de">hattest</td><td class="de">hatte</td><td class="de">hatten</td><td class="en">had</td></tr>
+        <tr><td class="de">werden</td><td class="de">wurde</td><td class="de">wurdest</td><td class="de">wurde</td><td class="de">wurden</td><td class="en">became</td></tr>
+        <tr><td class="de">können</td><td class="de">konnte</td><td class="de">konntest</td><td class="de">konnte</td><td class="de">konnten</td><td class="en">could</td></tr>
+        <tr><td class="de">müssen</td><td class="de">musste</td><td class="de">musstest</td><td class="de">musste</td><td class="de">mussten</td><td class="en">had to</td></tr>
+        <tr><td class="de">wollen</td><td class="de">wollte</td><td class="de">wolltest</td><td class="de">wollte</td><td class="de">wollten</td><td class="en">wanted</td></tr>
+        <tr><td class="de">gehen</td><td class="de">ging</td><td class="de">gingst</td><td class="de">ging</td><td class="de">gingen</td><td class="en">went</td></tr>
+        <tr><td class="de">kommen</td><td class="de">kam</td><td class="de">kamst</td><td class="de">kam</td><td class="de">kamen</td><td class="en">came</td></tr>
+        <tr><td class="de">fahren</td><td class="de">fuhr</td><td class="de">fuhrst</td><td class="de">fuhr</td><td class="de">fuhren</td><td class="en">drove</td></tr>
+        <tr><td class="de">sagen</td><td class="de">sagte</td><td class="de">sagtest</td><td class="de">sagte</td><td class="de">sagten</td><td class="en">said</td></tr>
+      </table>
+    </div>
+
+    <!-- Word Order -->
+    <div class="topic-block fade-in">
+      <h3>German Word Order (Wortstellung) — The Golden Rules</h3>
+      <table class="ex-table">
+        <tr><th>Rule</th><th>Example</th><th>English</th></tr>
+        <tr><td class="note">Verb always 2nd in main clause</td><td class="de">Morgen <strong>gehe</strong> ich ins Kino.</td><td class="en">Tomorrow I'm going to the cinema.</td></tr>
+        <tr><td class="note">Time - Manner - Place (TMP)</td><td class="de">Ich fahre <strong>morgen</strong> [time] <strong>mit dem Bus</strong> [manner] <strong>nach Berlin</strong> [place].</td><td class="en">I'm traveling tomorrow by bus to Berlin.</td></tr>
+        <tr><td class="note">Infinitive at end (modal)</td><td class="de">Ich kann heute nicht <strong>kommen</strong>.</td><td class="en">I can't come today.</td></tr>
+        <tr><td class="note">Partizip II at end (Perfekt)</td><td class="de">Ich habe gestern Deutsch <strong>gelernt</strong>.</td><td class="en">I learned German yesterday.</td></tr>
+        <tr><td class="note">Verb at end in subordinate clause</td><td class="de">Ich weiß, dass er in Berlin <strong>wohnt</strong>.</td><td class="en">I know that he lives in Berlin.</td></tr>
+        <tr><td class="note">Negation: nicht before what's negated</td><td class="de">Ich gehe <strong>nicht</strong> ins Kino.</td><td class="en">I'm not going to the cinema.</td></tr>
+        <tr><td class="note">kein- negates nouns</td><td class="de">Ich habe <strong>kein</strong> Geld.</td><td class="en">I have no money.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ VOCAB HUB ══════════════════════ -->
+<section class="section" id="vocab" style="background:rgba(255,255,255,0.01)">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">VO</div>
+      <div class="section-title-group">
+        <div class="level-pill" style="background:rgba(200,168,75,0.1);border:1px solid var(--gold);color:var(--gold)">VOCABULARY</div>
+        <h2>600+ Essential Words by Theme</h2>
+        <p>The most important words for everyday life in Germany</p>
+      </div>
+    </div>
+
+    <div class="card-grid fade-in">
+      <!-- Emotions -->
+      <div class="card">
+        <h3>😊 Emotions & Feelings</h3>
+        <table class="ex-table">
+          <tr><td class="de">glücklich</td><td class="en">happy</td></tr>
+          <tr><td class="de">traurig</td><td class="en">sad</td></tr>
+          <tr><td class="de">wütend</td><td class="en">angry</td></tr>
+          <tr><td class="de">aufgeregt</td><td class="en">excited</td></tr>
+          <tr><td class="de">müde</td><td class="en">tired</td></tr>
+          <tr><td class="de">entspannt</td><td class="en">relaxed</td></tr>
+          <tr><td class="de">nervös</td><td class="en">nervous</td></tr>
+          <tr><td class="de">zufrieden</td><td class="en">satisfied</td></tr>
+          <tr><td class="de">einsam</td><td class="en">lonely</td></tr>
+          <tr><td class="de">stolz</td><td class="en">proud</td></tr>
+        </table>
+      </div>
+
+      <!-- Colors -->
+      <div class="card">
+        <h3>🎨 Colors & Descriptions</h3>
+        <table class="ex-table">
+          <tr><td class="de">rot</td><td class="en">red</td></tr>
+          <tr><td class="de">blau</td><td class="en">blue</td></tr>
+          <tr><td class="de">grün</td><td class="en">green</td></tr>
+          <tr><td class="de">gelb</td><td class="en">yellow</td></tr>
+          <tr><td class="de">schwarz</td><td class="en">black</td></tr>
+          <tr><td class="de">weiß</td><td class="en">white</td></tr>
+          <tr><td class="de">grau</td><td class="en">grey</td></tr>
+          <tr><td class="de">braun</td><td class="en">brown</td></tr>
+          <tr><td class="de">orange</td><td class="en">orange</td></tr>
+          <tr><td class="de">lila / violett</td><td class="en">purple</td></tr>
+        </table>
+      </div>
+
+      <!-- Weather -->
+      <div class="card">
+        <h3>🌤️ Weather</h3>
+        <table class="ex-table">
+          <tr><td class="de">Es regnet.</td><td class="en">It's raining.</td></tr>
+          <tr><td class="de">Es schneit.</td><td class="en">It's snowing.</td></tr>
+          <tr><td class="de">Es ist sonnig.</td><td class="en">It's sunny.</td></tr>
+          <tr><td class="de">Es ist bewölkt.</td><td class="en">It's cloudy.</td></tr>
+          <tr><td class="de">Es ist windig.</td><td class="en">It's windy.</td></tr>
+          <tr><td class="de">Es ist heiß.</td><td class="en">It's hot.</td></tr>
+          <tr><td class="de">Es ist kalt.</td><td class="en">It's cold.</td></tr>
+          <tr><td class="de">Es ist neblig.</td><td class="en">It's foggy.</td></tr>
+          <tr><td class="de">das Gewitter</td><td class="en">thunderstorm</td></tr>
+          <tr><td class="de">die Temperatur</td><td class="en">temperature</td></tr>
+        </table>
+      </div>
+
+      <!-- Clothing -->
+      <div class="card">
+        <h3>👗 Clothing</h3>
+        <table class="ex-table">
+          <tr><td class="de">das Hemd</td><td class="en">shirt</td></tr>
+          <tr><td class="de">die Bluse</td><td class="en">blouse</td></tr>
+          <tr><td class="de">die Hose</td><td class="en">trousers/pants</td></tr>
+          <tr><td class="de">der Rock</td><td class="en">skirt</td></tr>
+          <tr><td class="de">das Kleid</td><td class="en">dress</td></tr>
+          <tr><td class="de">der Mantel</td><td class="en">coat</td></tr>
+          <tr><td class="de">der Pullover</td><td class="en">sweater</td></tr>
+          <tr><td class="de">die Jacke</td><td class="en">jacket</td></tr>
+          <tr><td class="de">die Schuhe</td><td class="en">shoes</td></tr>
+          <tr><td class="de">die Socken</td><td class="en">socks</td></tr>
+        </table>
+      </div>
+
+      <!-- Berlin-specific -->
+      <div class="card" style="border-color:rgba(200,168,75,0.3)">
+        <h3>🐻 Berlin Vocabulary</h3>
+        <table class="ex-table">
+          <tr><td class="de">der Berliner Bär</td><td class="en">Berlin bear (symbol)</td></tr>
+          <tr><td class="de">das Brandenburger Tor</td><td class="en">Brandenburg Gate</td></tr>
+          <tr><td class="de">die Mauerpark</td><td class="en">Mauerpark (park near wall)</td></tr>
+          <tr><td class="de">der Kiez</td><td class="en">neighborhood (Berlin dialect)</td></tr>
+          <tr><td class="de">die Berliner Mauer</td><td class="en">Berlin Wall</td></tr>
+          <tr><td class="de">der BVG</td><td class="en">Berlin transport company</td></tr>
+          <tr><td class="de">das Jobcenter</td><td class="en">employment office</td></tr>
+          <tr><td class="de">der Currywurst</td><td class="en">curry sausage (Berlin dish)</td></tr>
+          <tr><td class="de">der Spätie</td><td class="en">late-night convenience store</td></tr>
+          <tr><td class="de">die Steuernummer</td><td class="en">tax identification number</td></tr>
+        </table>
+      </div>
+
+      <!-- Numbers Advanced -->
+      <div class="card">
+        <h3>📊 Useful Adverbs</h3>
+        <table class="ex-table">
+          <tr><td class="de">auch</td><td class="en">also / too</td></tr>
+          <tr><td class="de">noch</td><td class="en">still / yet / another</td></tr>
+          <tr><td class="de">schon</td><td class="en">already / yet</td></tr>
+          <tr><td class="de">erst</td><td class="en">only / just / first</td></tr>
+          <tr><td class="de">nur</td><td class="en">only</td></tr>
+          <tr><td class="de">doch</td><td class="en">yes (contradicting) / after all</td></tr>
+          <tr><td class="de">eigentlich</td><td class="en">actually / basically</td></tr>
+          <tr><td class="de">ungefähr</td><td class="en">approximately</td></tr>
+          <tr><td class="de">mindestens</td><td class="en">at least</td></tr>
+          <tr><td class="de">höchstens</td><td class="en">at most</td></tr>
+        </table>
+      </div>
+
+      <!-- Connectors -->
+      <div class="card">
+        <h3>🔗 Discourse Connectors</h3>
+        <table class="ex-table">
+          <tr><td class="de">und</td><td class="en">and</td></tr>
+          <tr><td class="de">aber</td><td class="en">but</td></tr>
+          <tr><td class="de">oder</td><td class="en">or</td></tr>
+          <tr><td class="de">denn</td><td class="en">because (coord.)</td></tr>
+          <tr><td class="de">deshalb / deswegen</td><td class="en">therefore</td></tr>
+          <tr><td class="de">trotzdem</td><td class="en">nevertheless</td></tr>
+          <tr><td class="de">außerdem</td><td class="en">moreover</td></tr>
+          <tr><td class="de">zum Beispiel (z.B.)</td><td class="en">for example</td></tr>
+          <tr><td class="de">das heißt (d.h.)</td><td class="en">that is / i.e.</td></tr>
+          <tr><td class="de">sowohl ... als auch</td><td class="en">both ... and</td></tr>
+        </table>
+      </div>
+
+      <!-- Questions -->
+      <div class="card">
+        <h3>❓ Question Words</h3>
+        <table class="ex-table">
+          <tr><td class="de">Wer?</td><td class="en">Who?</td></tr>
+          <tr><td class="de">Was?</td><td class="en">What?</td></tr>
+          <tr><td class="de">Wo?</td><td class="en">Where?</td></tr>
+          <tr><td class="de">Wohin?</td><td class="en">Where to?</td></tr>
+          <tr><td class="de">Woher?</td><td class="en">Where from?</td></tr>
+          <tr><td class="de">Wann?</td><td class="en">When?</td></tr>
+          <tr><td class="de">Wie?</td><td class="en">How?</td></tr>
+          <tr><td class="de">Wie viel?</td><td class="en">How much?</td></tr>
+          <tr><td class="de">Warum? / Wieso?</td><td class="en">Why?</td></tr>
+          <tr><td class="de">Welch-?</td><td class="en">Which?</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 200 Sentence Examples -->
+    <div class="topic-block fade-in mt24">
+      <h3>200 Essential Sentences for Everyday German Life</h3>
+      <table class="ex-table">
+        <tr><th>#</th><th>German</th><th>English</th><th>Level</th></tr>
+        <tr><td>1</td><td class="de">Ich heiße... und ich komme aus...</td><td class="en">My name is... and I come from...</td><td class="note">A1</td></tr>
+        <tr><td>2</td><td class="de">Ich wohne seit zwei Jahren in Berlin.</td><td class="en">I have lived in Berlin for two years.</td><td class="note">A2</td></tr>
+        <tr><td>3</td><td class="de">Ich arbeite als Kellner / Ingenieur / Lehrer.</td><td class="en">I work as a waiter / engineer / teacher.</td><td class="note">A1</td></tr>
+        <tr><td>4</td><td class="de">Können Sie das bitte wiederholen?</td><td class="en">Could you please repeat that?</td><td class="note">A1</td></tr>
+        <tr><td>5</td><td class="de">Ich verstehe das nicht. Können Sie das erklären?</td><td class="en">I don't understand that. Can you explain it?</td><td class="note">A2</td></tr>
+        <tr><td>6</td><td class="de">Sprechen Sie bitte langsamer.</td><td class="en">Please speak more slowly.</td><td class="note">A1</td></tr>
+        <tr><td>7</td><td class="de">Wie komme ich zum Bahnhof?</td><td class="en">How do I get to the train station?</td><td class="note">A1</td></tr>
+        <tr><td>8</td><td class="de">Nehmen Sie die U6 bis zum Stadtmitte.</td><td class="en">Take the U6 to Stadtmitte.</td><td class="note">A2</td></tr>
+        <tr><td>9</td><td class="de">Ich hätte gern ein Zimmer für zwei Nächte.</td><td class="en">I would like a room for two nights.</td><td class="note">B1</td></tr>
+        <tr><td>10</td><td class="de">Was kostet das pro Nacht?</td><td class="en">What does that cost per night?</td><td class="note">A1</td></tr>
+        <tr><td>11</td><td class="de">Ich suche eine Wohnung in der Nähe vom Zentrum.</td><td class="en">I'm looking for an apartment near the center.</td><td class="note">A2</td></tr>
+        <tr><td>12</td><td class="de">Die Wohnung hat drei Zimmer, eine Küche und ein Bad.</td><td class="en">The apartment has three rooms, a kitchen and a bathroom.</td><td class="note">A2</td></tr>
+        <tr><td>13</td><td class="de">Wie hoch ist die Miete pro Monat?</td><td class="en">How high is the rent per month?</td><td class="note">A2</td></tr>
+        <tr><td>14</td><td class="de">Ich möchte einen Termin vereinbaren.</td><td class="en">I would like to make an appointment.</td><td class="note">A2</td></tr>
+        <tr><td>15</td><td class="de">Haben Sie einen Termin am Montagnachmittag?</td><td class="en">Do you have an appointment on Monday afternoon?</td><td class="note">A2</td></tr>
+        <tr><td>16</td><td class="de">Es tut mir leid, ich muss den Termin absagen.</td><td class="en">I'm sorry, I have to cancel the appointment.</td><td class="note">B1</td></tr>
+        <tr><td>17</td><td class="de">Ich bin seit gestern krank und kann nicht kommen.</td><td class="en">I have been sick since yesterday and cannot come.</td><td class="note">A2</td></tr>
+        <tr><td>18</td><td class="de">Ich brauche eine Krankschreibung.</td><td class="en">I need a sick note.</td><td class="note">B1</td></tr>
+        <tr><td>19</td><td class="de">Meine Krankenversicherungskarte lautet auf den Namen...</td><td class="en">My health insurance card is in the name of...</td><td class="note">B1</td></tr>
+        <tr><td>20</td><td class="de">Ich möchte mich über die Kurse informieren.</td><td class="en">I would like to get information about the courses.</td><td class="note">A2</td></tr>
+        <tr><td>21</td><td class="de">Wann fängt der Kurs an und wann hört er auf?</td><td class="en">When does the course start and when does it end?</td><td class="note">A2</td></tr>
+        <tr><td>22</td><td class="de">Ich möchte mich für den Integrationskurs anmelden.</td><td class="en">I would like to register for the integration course.</td><td class="note">B1</td></tr>
+        <tr><td>23</td><td class="de">Welche Dokumente brauche ich dafür?</td><td class="en">Which documents do I need for that?</td><td class="note">A2</td></tr>
+        <tr><td>24</td><td class="de">Ich habe meine Unterlagen dabei.</td><td class="en">I have my documents with me.</td><td class="note">A2</td></tr>
+        <tr><td>25</td><td class="de">Könnten Sie mir das bitte aufschreiben?</td><td class="en">Could you please write that down for me?</td><td class="note">B1</td></tr>
+        <tr><td>26</td><td class="de">Ich muss das mit meinem Mann / meiner Frau besprechen.</td><td class="en">I need to discuss that with my husband/wife.</td><td class="note">A2</td></tr>
+        <tr><td>27</td><td class="de">Das ist ein interessantes Angebot. Ich denke darüber nach.</td><td class="en">That is an interesting offer. I'll think about it.</td><td class="note">B1</td></tr>
+        <tr><td>28</td><td class="de">Ich zahle lieber bar als mit Karte.</td><td class="en">I prefer to pay in cash rather than by card.</td><td class="note">A2</td></tr>
+        <tr><td>29</td><td class="de">Können Sie mir eine Quittung / eine Rechnung geben?</td><td class="en">Can you give me a receipt / an invoice?</td><td class="note">B1</td></tr>
+        <tr><td>30</td><td class="de">Das Essen schmeckt sehr gut / lecker!</td><td class="en">The food tastes very good / delicious!</td><td class="note">A1</td></tr>
+        <tr><td>31</td><td class="de">Ich bin Vegetarier/in. Haben Sie auch vegetarische Gerichte?</td><td class="en">I am vegetarian. Do you also have vegetarian dishes?</td><td class="note">A2</td></tr>
+        <tr><td>32</td><td class="de">Ich bin allergisch gegen Nüsse / Gluten / Milch.</td><td class="en">I am allergic to nuts / gluten / dairy.</td><td class="note">B1</td></tr>
+        <tr><td>33</td><td class="de">Die Bestellung stimmt nicht. Ich habe das nicht bestellt.</td><td class="en">The order is wrong. I didn't order that.</td><td class="note">A2</td></tr>
+        <tr><td>34</td><td class="de">Wo ist die Toilette, bitte?</td><td class="en">Where is the toilet, please?</td><td class="note">A1</td></tr>
+        <tr><td>35</td><td class="de">Ich habe meinen Schlüssel / mein Handy verloren.</td><td class="en">I lost my key / my mobile phone.</td><td class="note">A2</td></tr>
+        <tr><td>36</td><td class="de">Können Sie die Polizei rufen?</td><td class="en">Can you call the police?</td><td class="note">A2</td></tr>
+        <tr><td>37</td><td class="de">Ich habe einen Unfall gehabt.</td><td class="en">I had an accident.</td><td class="note">A2</td></tr>
+        <tr><td>38</td><td class="de">Wo ist die nächste U-Bahn-Station?</td><td class="en">Where is the nearest metro station?</td><td class="note">A1</td></tr>
+        <tr><td>39</td><td class="de">Wann fährt der nächste Zug nach Hamburg?</td><td class="en">When does the next train to Hamburg depart?</td><td class="note">A2</td></tr>
+        <tr><td>40</td><td class="de">Ich möchte eine Fahrkarte für den Berliner Nahverkehr kaufen.</td><td class="en">I would like to buy a ticket for Berlin local transport.</td><td class="note">A2</td></tr>
+        <tr><td>41</td><td class="de">Gilt dieses Ticket auch für die S-Bahn?</td><td class="en">Is this ticket also valid for the S-Bahn?</td><td class="note">B1</td></tr>
+        <tr><td>42</td><td class="de">Ich hätte gerne einen Monatskarte.</td><td class="en">I would like a monthly pass.</td><td class="note">A2</td></tr>
+        <tr><td>43</td><td class="de">Darf ich das Gepäck hier lassen?</td><td class="en">May I leave the luggage here?</td><td class="note">B1</td></tr>
+        <tr><td>44</td><td class="de">Ich brauche Hilfe beim Ausfüllen des Formulars.</td><td class="en">I need help filling out the form.</td><td class="note">B1</td></tr>
+        <tr><td>45</td><td class="de">Was sind Ihre Öffnungszeiten?</td><td class="en">What are your opening hours?</td><td class="note">A2</td></tr>
+        <tr><td>46</td><td class="de">Das Amt ist montags bis freitags von 8 bis 18 Uhr geöffnet.</td><td class="en">The office is open Monday to Friday from 8 to 6 pm.</td><td class="note">A2</td></tr>
+        <tr><td>47</td><td class="de">Ich möchte ein Bankkonto eröffnen.</td><td class="en">I would like to open a bank account.</td><td class="note">B1</td></tr>
+        <tr><td>48</td><td class="de">Ich überweise das Geld per Banküberweisung.</td><td class="en">I transfer the money via bank transfer.</td><td class="note">B1</td></tr>
+        <tr><td>49</td><td class="de">Mein Kind geht in die Grundschule / in den Kindergarten.</td><td class="en">My child goes to primary school / kindergarten.</td><td class="note">A2</td></tr>
+        <tr><td>50</td><td class="de">In meiner Freizeit lese ich gern und gehe spazieren.</td><td class="en">In my free time I like to read and go for walks.</td><td class="note">A1</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ BERLIN EXAM ══════════════════════ -->
+<div class="berlin-banner fade-in">
+  <h2>🐻 The Berlin Sprachtest — Everything You Need to Know</h2>
+  <p>Telc Deutsch B1 · Goethe-Zertifikat B1 · ÖSD Zertifikat B1</p>
+</div>
+
+<section class="section berlin-section" id="exam">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <div class="section-level">EX</div>
+      <div class="section-title-group">
+        <div class="level-pill" style="background:rgba(200,168,75,0.15);border:1px solid var(--gold);color:var(--gold)">PRÜFUNG</div>
+        <h2>Berlin Sprachtest — Full Exam Guide</h2>
+        <p>Structure, skills tested, sample tasks & proven strategies</p>
+      </div>
+    </div>
+
+    <!-- Exam Overview -->
+    <div class="exam-card fade-in">
+      <h3>📋 Exam Structure — Telc Deutsch B1 / Goethe B1</h3>
+      <p style="color:rgba(245,240,232,0.75);margin-bottom:8px;">Total exam time: approximately <strong style="color:var(--gold)">3 hours</strong>. Four skills tested. Minimum pass: usually 60% in each section.</p>
+      <div class="exam-parts">
+        <div class="exam-part">
+          <div class="exam-part-label">Part 1</div>
+          <h4>🔊 Hören (Listening)</h4>
+          <p>~40 min · 3 sections: short conversations, radio texts, longer dialogues. Multiple choice & true/false.</p>
+        </div>
+        <div class="exam-part">
+          <div class="exam-part-label">Part 2</div>
+          <h4>📖 Lesen (Reading)</h4>
+          <p>~65 min · 3 sections: correspondence, notices, continuous text. Multiple choice, matching, right/wrong.</p>
+        </div>
+        <div class="exam-part">
+          <div class="exam-part-label">Part 3</div>
+          <h4>✍️ Schreiben (Writing)</h4>
+          <p>~30 min · Write a formal letter or email (~150 words) responding to a prompt with required points.</p>
+        </div>
+        <div class="exam-part">
+          <div class="exam-part-label">Part 4</div>
+          <h4>🗣️ Sprechen (Speaking)</h4>
+          <p>~15 min (pairs) · 3 tasks: introduce yourself, discuss a topic with partner, plan a joint activity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reading Strategies -->
+    <div class="topic-block fade-in" style="border-left-color:var(--blue-mid)">
+      <h3>📖 Lesen — Reading Section Mastery</h3>
+      <div class="tip-box">
+        <div class="tip-icon">⚡</div>
+        <p><strong>Strategy:</strong> Read the questions FIRST, then skim the text. German exam texts often use synonyms — the answer won't use the exact same words as the question.</p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Sample Reading Task — Anzeigen (Notices)</h4>
+      <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);padding:20px;margin:12px 0;">
+        <p style="color:var(--gold);font-size:0.8rem;font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:12px;">PRACTICE READING — SMALL ADS</p>
+        <p style="color:rgba(245,240,232,0.9);font-size:0.88rem;margin-bottom:16px;"><strong>Aufgabe:</strong> Lesen Sie die Anzeigen und ordnen Sie zu. Welche Anzeige passt?</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:rgba(255,255,255,0.04);padding:14px;border:1px solid rgba(255,255,255,0.06)">
+            <p class="de" style="font-size:0.85rem;"><strong>A.</strong> Sprachkurs Deutsch für Ausländer! Montag bis Freitag, 9–12 Uhr. Kursgebühr: 80 € pro Monat. Anmeldung: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6dfd8d0d9f6c5c6c4d7d5dec5d5dec3dad39bd4d3c4dadfd898d2d3">[email&#160;protected]</a></p>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:14px;border:1px solid rgba(255,255,255,0.06)">
+            <p class="de" style="font-size:0.85rem;"><strong>B.</strong> Zu vermieten: helles 2-Zimmer-Apartment in Kreuzberg, 850 € warm. Keine Haustiere. Tel: 030-12345678</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:14px;border:1px solid rgba(255,255,255,0.06)">
+            <p class="de" style="font-size:0.85rem;"><strong>C.</strong> Suche Babysitter für 2 Kinder (4 und 7 Jahre), donnerstags 14–18 Uhr. Bezahlung 12 €/Std. Deutsch-Kenntnisse nötig.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:14px;border:1px solid rgba(255,255,255,0.06)">
+            <p class="de" style="font-size:0.85rem;"><strong>D.</strong> Verkaufe: Fahrrad, guter Zustand, 3 Jahre alt. Nur 120 Euro. Abholung in Mitte. Kontakt: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4523242d37372421052028242c296b2120">[email&#160;protected]</a></p>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <p style="color:rgba(245,240,232,0.75);font-size:0.85rem;"><strong>Situationen:</strong></p>
+          <p style="color:rgba(245,240,232,0.75);font-size:0.85rem;margin-top:6px;">1. Sie möchten Deutsch lernen. Welche Anzeige passt? → <span style="color:var(--gold)">A</span></p>
+          <p style="color:rgba(245,240,232,0.75);font-size:0.85rem;">2. Sie suchen eine Wohnung. Welche Anzeige passt? → <span style="color:var(--gold)">B</span></p>
+          <p style="color:rgba(245,240,232,0.75);font-size:0.85rem;">3. Sie möchten nebenbei Geld verdienen. Welche Anzeige passt? → <span style="color:var(--gold)">C</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Writing Strategies -->
+    <div class="topic-block fade-in" style="border-left-color:#27ae60">
+      <h3>✍️ Schreiben — Writing Section Mastery</h3>
+      <div class="grammar-box">
+        <h4>⚡ B1 Letter Structure</h4>
+        <div class="formula">1. Betreff (Subject line)</div>
+        <div class="formula">2. Anrede (Salutation): Sehr geehrte Damen und Herren, / Sehr geehrte Frau Müller,</div>
+        <div class="formula">3. Einleitung (Introduction): Ich schreibe Ihnen bezüglich...</div>
+        <div class="formula">4. Hauptteil (Body): Address all required points</div>
+        <div class="formula">5. Schluss (Closing): Mit freundlichen Grüßen, / Ich freue mich auf Ihre Antwort.</div>
+        <div class="formula">6. Name</div>
+      </div>
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Sample Writing Task + Model Answer</h4>
+      <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);padding:20px;margin:10px 0">
+        <p style="color:var(--gold);font-size:0.8rem;font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:10px">AUFGABE</p>
+        <p style="color:rgba(245,240,232,0.85);font-size:0.88rem">Sie haben bei einem Kurs angemeldet, aber Sie können leider nicht kommen. Schreiben Sie eine E-Mail an die Sprachschule. Schreiben Sie über: warum Sie absagen · für wann Sie einen neuen Termin möchten · ob Sie Ihre Anzahlung zurückbekommen können.</p>
+      </div>
+      <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(27,174,97,0.25);padding:20px;margin:10px 0">
+        <p style="color:#27ae60;font-size:0.8rem;font-family:'DM Mono',monospace;letter-spacing:1px;margin-bottom:10px">MUSTERLÖSUNG (Model Answer — B1 Level)</p>
+        <p class="de" style="font-size:0.88rem;line-height:1.9">
+          <strong>Betreff: Absage meiner Kursanmeldung</strong><br><br>
+          Sehr geehrte Damen und Herren,<br><br>
+          ich schreibe Ihnen, weil ich leider meinen gebuchten Deutschkurs absagen muss. Der Kurs sollte am 15. April beginnen. Leider habe ich in dieser Zeit plötzlich einen wichtigen Arzttermin bekommen, den ich nicht verschieben kann.<br><br>
+          Ich würde gern an dem Kurs teilnehmen, der im Mai beginnt. Wäre das möglich? Ich freue mich auf Ihre Rückmeldung bezüglich der freien Plätze.<br><br>
+          Außerdem hätte ich eine Frage zu meiner Anzahlung von 50 Euro. Könnte ich diesen Betrag auf den neuen Kurs übertragen, oder bekäme ich ihn zurück?<br><br>
+          Ich bedanke mich im Voraus für Ihre Hilfe und freue mich auf Ihre Antwort.<br><br>
+          Mit freundlichen Grüßen,<br>
+          Ahmed Al-Rashid
+        </p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:16px 0 8px;">Key Useful Phrases for Letters/Emails</h4>
+      <table class="ex-table">
+        <tr><th>Function</th><th>German Phrase</th></tr>
+        <tr><td>Opening</td><td class="de">Ich schreibe Ihnen bezüglich... / Ich wende mich an Sie, weil...</td></tr>
+        <tr><td>Referring</td><td class="de">Bezüglich Ihrer Anzeige... / In Bezug auf unsere Reservierung...</td></tr>
+        <tr><td>Requesting</td><td class="de">Ich bitte Sie, ... zu... / Könnten Sie mir bitte... schicken?</td></tr>
+        <tr><td>Apologizing</td><td class="de">Es tut mir sehr leid, aber... / Leider muss ich Ihnen mitteilen, dass...</td></tr>
+        <tr><td>Complaining</td><td class="de">Ich möchte mich über... beschweren / Ich bin sehr unzufrieden mit...</td></tr>
+        <tr><td>Thanking</td><td class="de">Ich bedanke mich im Voraus für... / Vielen Dank für Ihre schnelle Antwort.</td></tr>
+        <tr><td>Closing</td><td class="de">Mit freundlichen Grüßen / Hochachtungsvoll / Viele Grüße</td></tr>
+        <tr><td>Looking forward</td><td class="de">Ich freue mich auf Ihre Antwort / Ich hoffe, bald von Ihnen zu hören.</td></tr>
+      </table>
+    </div>
+
+    <!-- Speaking Strategies -->
+    <div class="topic-block fade-in" style="border-left-color:var(--a2-color)">
+      <h3>🗣️ Sprechen — Speaking Section Mastery</h3>
+      <div class="exam-parts" style="margin-bottom:20px">
+        <div class="exam-part">
+          <div class="exam-part-label">Teil 1</div>
+          <h4>Vorstellen</h4>
+          <p>~2 min: Introduce yourself. Name, origin, job, family, hobbies, why you learn German.</p>
+        </div>
+        <div class="exam-part">
+          <div class="exam-part-label">Teil 2</div>
+          <h4>Gemeinsam planen</h4>
+          <p>~5 min: Plan something together with your exam partner (e.g. a party, a trip, a gift).</p>
+        </div>
+        <div class="exam-part">
+          <div class="exam-part-label">Teil 3</div>
+          <h4>Präsentation</h4>
+          <p>~4 min: Present on a given topic, then respond to partner's presentation. Give opinion, agree/disagree.</p>
+        </div>
+      </div>
+
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Teil 1 — Model Self-Introduction</h4>
+      <div class="dialogue">
+        <div class="dialogue-title">🎭 Model Vorstellung — B1 Level</div>
+        <div class="dialogue-line">
+          <span class="speaker b">YOU:</span>
+          <div><div class="line-text">Guten Tag! Ich heiße Fatima Özdemir und ich komme ursprünglich aus der Türkei, genauer gesagt aus Istanbul. Ich wohne jetzt seit drei Jahren in Berlin, im Bezirk Neukölln.</div><div class="line-trans">Good day! My name is Fatima Özdemir and I originally come from Turkey, more precisely from Istanbul. I have been living in Berlin for three years now, in the district of Neukölln.</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">YOU:</span>
+          <div><div class="line-text">Von Beruf bin ich Friseurin. Ich arbeite in einem Salon in der Nähe von meiner Wohnung. Die Arbeit macht mir viel Spaß, weil ich gern mit Menschen zusammenarbeite.</div><div class="line-trans">By profession I am a hairdresser. I work in a salon near my apartment. I really enjoy the work because I like working with people.</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">YOU:</span>
+          <div><div class="line-text">In meiner Freizeit gehe ich gern spazieren, besonders im Tiergarten. Ich lese auch gern, hauptsächlich auf Türkisch, aber jetzt versuche ich mehr auf Deutsch zu lesen. Ich lerne Deutsch, weil ich hier dauerhaft leben möchte und die Sprache für meinen Alltag sehr wichtig ist.</div><div class="line-trans">In my free time I like to go for walks, especially in the Tiergarten. I also like to read, mainly in Turkish, but now I am trying to read more in German. I am learning German because I want to live here permanently and the language is very important for my everyday life.</div></div>
+        </div>
+      </div>
+
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Teil 2 — Planning a Joint Activity (Sample)</h4>
+      <div class="dialogue">
+        <div class="dialogue-title">🎭 Gemeinsam planen — Planning a colleague's farewell party</div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Wir müssen eine Abschiedsfeier für Klaus organisieren. Was schlägst du vor?</div><div class="line-trans">We need to organize a farewell party for Klaus. What do you suggest?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Ich würde vorschlagen, dass wir die Feier nächsten Freitagabend machen. Was meinst du?</div><div class="line-trans">I would suggest that we hold the party next Friday evening. What do you think?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Das klingt gut. Sollen wir ins Restaurant gehen oder lieber zu Hause feiern?</div><div class="line-trans">That sounds good. Should we go to a restaurant or celebrate at home instead?</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Meiner Meinung nach wäre ein Restaurant besser, weil wir dann nicht alles selbst machen müssen. Außerdem ist es gemütlicher.</div><div class="line-trans">In my opinion a restaurant would be better, because then we don't have to do everything ourselves. Also it's more cozy.</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker a">A:</span>
+          <div><div class="line-text">Einverstanden. Und was schenken wir ihm? Ich hätte die Idee, Geld zu sammeln und ihm etwas Persönliches zu kaufen.</div><div class="line-trans">Agreed. And what do we give him? I had the idea to collect money and buy him something personal.</div></div>
+        </div>
+        <div class="dialogue-line">
+          <span class="speaker b">B:</span>
+          <div><div class="line-text">Das finde ich prima. Vielleicht ein Buch über Berlin, da er ja umzieht? Das wäre eine schöne Erinnerung.</div><div class="line-trans">I think that's great. Maybe a book about Berlin, since he's moving away? That would be a nice memory.</div></div>
+        </div>
+      </div>
+
+      <h4 style="color:var(--gold-light);margin:16px 0 8px;">Useful Speaking Fillers & Transitions</h4>
+      <table class="ex-table">
+        <tr><th>Function</th><th>German</th><th>English</th></tr>
+        <tr><td>Buying time</td><td class="de">Also... / Hmm, also ich glaube... / Moment mal...</td><td class="en">Well... / Hmm, well I think... / Just a moment...</td></tr>
+        <tr><td>Asking for repetition</td><td class="de">Könnten Sie das bitte wiederholen? / Wie bitte?</td><td class="en">Could you please repeat that? / Pardon?</td></tr>
+        <tr><td>Clarifying</td><td class="de">Was meinen Sie damit? / Ich habe das nicht ganz verstanden.</td><td class="en">What do you mean by that? / I didn't quite understand.</td></tr>
+        <tr><td>Agreeing</td><td class="de">Genau! / Da stimme ich zu. / Das finde ich auch.</td><td class="en">Exactly! / I agree with that. / I think so too.</td></tr>
+        <tr><td>Disagreeing politely</td><td class="de">Ich sehe das etwas anders. / Das stimmt, aber...</td><td class="en">I see that a bit differently. / That's true, but...</td></tr>
+        <tr><td>Making suggestions</td><td class="de">Wie wäre es mit...? / Ich würde vorschlagen, dass...</td><td class="en">How about...? / I would suggest that...</td></tr>
+        <tr><td>Responding to suggestions</td><td class="de">Das klingt gut! / Das wäre eine Möglichkeit.</td><td class="en">That sounds good! / That would be one option.</td></tr>
+      </table>
+    </div>
+
+    <!-- Listening Tips -->
+    <div class="topic-block fade-in" style="border-left-color:var(--a1-color)">
+      <h3>🔊 Hören — Listening Section Mastery</h3>
+      <div class="tip-box">
+        <div class="tip-icon">🎯</div>
+        <p><strong>Golden Rules:</strong> (1) Read questions before listening. (2) The recording plays TWICE — use first listen for gist, second for detail. (3) Trust your instinct — overthinking leads to errors. (4) Don't leave blanks — guess if needed.</p>
+      </div>
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Common Listening Task Types</h4>
+      <table class="ex-table">
+        <tr><th>Task Type</th><th>What you hear</th><th>What you do</th></tr>
+        <tr><td>Short dialogues</td><td>5 short conversations</td><td>Match to pictures or choose a/b/c</td></tr>
+        <tr><td>Radio programme</td><td>News, weather, announcements</td><td>Mark statements richtig/falsch</td></tr>
+        <tr><td>Interview/conversation</td><td>Longer dialogue on a topic</td><td>Answer multiple choice questions</td></tr>
+        <tr><td>Phone messages</td><td>Voice mails / announcements</td><td>Fill in missing information</td></tr>
+      </table>
+      <h4 style="color:var(--gold-light);margin:14px 0 8px;">Key Listening Vocabulary — Numbers, Dates, Instructions</h4>
+      <table class="ex-table">
+        <tr><th>You might hear</th><th>It means</th></tr>
+        <tr><td class="de">Der Termin ist am siebenundzwanzigsten dritten.</td><td class="en">The appointment is on the 27th of March.</td></tr>
+        <tr><td class="de">Die Veranstaltung beginnt um viertel nach sieben.</td><td class="en">The event starts at quarter past seven (7:15).</td></tr>
+        <tr><td class="de">Das kostet neunzehn Euro fünfzig.</td><td class="en">That costs 19.50 euros.</td></tr>
+        <tr><td class="de">Bitte rufen Sie uns unter der Nummer 030-98765432 an.</td><td class="en">Please call us at the number 030-98765432.</td></tr>
+        <tr><td class="de">Der Zug hat zwanzig Minuten Verspätung.</td><td class="en">The train is twenty minutes late.</td></tr>
+        <tr><td class="de">Das Angebot gilt nur bis Ende des Monats.</td><td class="en">The offer is valid only until the end of the month.</td></tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ STUDY PLAN ══════════════════════ -->
+<section class="section" id="plan">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-level">SP</div>
+      <div class="section-title-group">
+        <div class="level-pill" style="background:rgba(200,168,75,0.1);border:1px solid var(--gold);color:var(--gold)">PLAN</div>
+        <h2>12-Month Study Plan</h2>
+        <p>Week by week — from A1 to B1 exam-ready</p>
+      </div>
+    </div>
+
+    <div class="card-grid fade-in">
+      <div class="card" style="border-top:3px solid var(--a1-color)">
+        <h3>🔴 Months 1–2 (A1)</h3>
+        <p><strong style="color:var(--a1-color)">Goal:</strong> Pass A1, basic daily communication</p>
+        <p>Week 1–2: Alphabet, pronunciation, greetings, numbers 1–100, basic nouns + articles</p>
+        <p>Week 3–4: Verb sein/haben, present tense regular verbs, personal pronouns, family vocab</p>
+        <p>Week 5–6: Irregular verbs, question words, days/months, telling time</p>
+        <p>Week 7–8: Accusative case, A1 revision, mock test A1</p>
+        <p style="color:var(--gold);margin-top:8px;font-family:'DM Mono',monospace;font-size:0.8rem">DAILY: 45 min vocab + 45 min grammar</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--a2-color)">
+        <h3>🟠 Months 3–5 (A2)</h3>
+        <p><strong style="color:var(--a2-color)">Goal:</strong> Pass A2, handle everyday situations</p>
+        <p>Week 9–10: Perfekt, Partizip II, haben vs sein</p>
+        <p>Week 11–12: Modal verbs, separable verbs, accusative prepositions</p>
+        <p>Week 13–14: Dative case, dative prepositions, two-way prepositions</p>
+        <p>Week 15–16: Subordinate clauses, Präteritum of key verbs</p>
+        <p>Week 17–20: A2 vocab expansion, mock test A2, letter writing basics</p>
+        <p style="color:var(--gold);margin-top:8px;font-family:'DM Mono',monospace;font-size:0.8rem">DAILY: 60 min study + 30 min input (podcast/TV)</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--b1-color)">
+        <h3>🔵 Months 6–10 (B1)</h3>
+        <p><strong style="color:var(--b1-color)">Goal:</strong> B1 mastery across all 4 skills</p>
+        <p>Week 21–24: Konjunktiv II, wenn-clauses, würde-construction</p>
+        <p>Week 25–28: Passive voice, relative clauses, genitive case</p>
+        <p>Week 29–32: Adjective endings, comparative/superlative, complex word order</p>
+        <p>Week 33–36: B1 vocabulary (2000+ words), reading authentic texts</p>
+        <p>Week 37–40: Extended practice: letters, listening, speaking — all exam tasks</p>
+        <p style="color:var(--gold);margin-top:8px;font-family:'DM Mono',monospace;font-size:0.8rem">DAILY: 90 min study + daily German media</p>
+      </div>
+      <div class="card" style="border-top:3px solid var(--gold)">
+        <h3>🏆 Months 11–12 (Exam Prep)</h3>
+        <p><strong style="color:var(--gold)">Goal:</strong> Pass the Berlin Sprachtest!</p>
+        <p>Week 41–44: Full mock exams (all 4 sections), timed practice</p>
+        <p>Week 45–46: Weakness identification and targeted review</p>
+        <p>Week 47: Rest, confidence-building, review key phrases</p>
+        <p>Week 48: <strong>Exam week!</strong></p>
+        <p style="color:var(--gold);margin-top:8px;font-family:'DM Mono',monospace;font-size:0.8rem">DAILY: 2 × full practice tests per week</p>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="topic-block fade-in" style="margin-top:40px">
+      <h3>🎯 Top Resources for Learning German in Berlin</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>📱 Apps</h3>
+          <table class="ex-table">
+            <tr><td class="de">Duolingo</td><td class="en">Daily habits, gamified — great for A1–A2</td></tr>
+            <tr><td class="de">Anki</td><td class="en">Flashcard SRS system — best for vocab</td></tr>
+            <tr><td class="de">Deutsche Welle</td><td class="en">Free news in slow German — B1 level</td></tr>
+            <tr><td class="de">Babbel</td><td class="en">Structured lessons, conversation focused</td></tr>
+            <tr><td class="de">Nicos Weg (ARD)</td><td class="en">Free A1–B1 video course</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>📚 Books</h3>
+          <table class="ex-table">
+            <tr><td class="de">Menschen A1/A2/B1</td><td class="en">Standard Hueber coursebook</td></tr>
+            <tr><td class="de">Studio d</td><td class="en">Popular German coursebook series</td></tr>
+            <tr><td class="de">Schritte international</td><td class="en">Excellent for immigrants/expats</td></tr>
+            <tr><td class="de">Telc practice books</td><td class="en">Official mock exams for telc B1</td></tr>
+            <tr><td class="de">Hammer's German Grammar</td><td class="en">Reference grammar for advanced learners</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>🌐 Websites</h3>
+          <table class="ex-table">
+            <tr><td class="de">dw.com/de</td><td class="en">Deutsche Welle — free course A1–C2</td></tr>
+            <tr><td class="de">goethe.de</td><td class="en">Goethe Institut — official exam prep</td></tr>
+            <tr><td class="de">telc.net</td><td class="en">telc — official B1 practice materials</td></tr>
+            <tr><td class="de">lingolia.com</td><td class="en">Grammar exercises with explanations</td></tr>
+            <tr><td class="de">youtube.com/c/easygerman</td><td class="en">Easy German — authentic street German</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h3>🏙️ In Berlin</h3>
+          <table class="ex-table">
+            <tr><td class="de">VHS Berlin</td><td class="en">Volkshochschule — affordable courses</td></tr>
+            <tr><td class="de">Goethe-Institut Berlin</td><td class="en">Premium courses + exam center</td></tr>
+            <tr><td class="de">Tandem partners</td><td class="en">Language exchange — free & effective</td></tr>
+            <tr><td class="de">Berlitz</td><td class="en">Intensive private lessons</td></tr>
+            <tr><td class="de">Integrationskurse BAMF</td><td class="en">State-subsidized integration courses</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common Mistakes -->
+    <div class="topic-block fade-in">
+      <h3>⚠️ Most Common Mistakes — And How to Avoid Them</h3>
+      <table class="ex-table">
+        <tr><th>Mistake</th><th>Wrong ❌</th><th>Correct ✅</th><th>Rule</th></tr>
+        <tr><td>Wrong article</td><td class="de">die Bahnhof</td><td class="de">der Bahnhof</td><td class="note">Learn articles WITH nouns always</td></tr>
+        <tr><td>Accusative not used</td><td class="de">Ich sehe der Mann.</td><td class="de">Ich sehe den Mann.</td><td class="note">Direct object → accusative → der→den</td></tr>
+        <tr><td>Verb position</td><td class="de">Ich weiß nicht was soll ich tun.</td><td class="de">Ich weiß nicht, was ich tun soll.</td><td class="note">Verb goes to END in subordinate clause</td></tr>
+        <tr><td>halb confusion</td><td class="de">Es ist halb acht = 8:30</td><td class="de">Es ist halb acht = 7:30</td><td class="note">halb = half BEFORE the hour!</td></tr>
+        <tr><td>sein vs haben in Perfekt</td><td class="de">Ich habe gegangen.</td><td class="de">Ich bin gegangen.</td><td class="note">Movement/change → sein</td></tr>
+        <tr><td>Adjective endings</td><td class="de">ein gut Mann</td><td class="de">ein guter Mann</td><td class="note">Adjective before noun needs ending</td></tr>
+        <tr><td>du vs Sie</td><td class="de">Entschuldigung, du bist der Arzt?</td><td class="de">Entschuldigung, sind Sie der Arzt?</td><td class="note">Always Sie with strangers/officials</td></tr>
+        <tr><td>nicht vs kein</td><td class="de">Ich habe nicht ein Auto.</td><td class="de">Ich habe kein Auto.</td><td class="note">kein negates nouns, nicht negates everything else</td></tr>
+        <tr><td>Missing separable prefix</td><td class="de">Ich stehe um 7 auf.</td><td class="de">Ich stehe um 7 auf. ✅ (correct)</td><td class="note">Prefix goes to END of main clause</td></tr>
+        <tr><td>weil word order</td><td class="de">Ich bleibe zu Hause, weil ich bin krank.</td><td class="de">Ich bleibe zu Hause, weil ich krank bin.</td><td class="note">After weil: verb goes to end!</td></tr>
+      </table>
+    </div>
+
+    <!-- Final Exam Tips -->
+    <div class="exam-card fade-in">
+      <h3>🏆 Final Exam Day Tips — Berlin Sprachtest</h3>
+      <div class="card-grid" style="margin-top:16px">
+        <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);padding:18px">
+          <p style="color:var(--gold);font-weight:700;margin-bottom:8px">The Night Before</p>
+          <p style="font-size:0.85rem;color:rgba(245,240,232,0.75)">Review your personal introduction. Read your model letter once. Sleep at least 7 hours. Do NOT try to cram new grammar.</p>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);padding:18px">
+          <p style="color:var(--gold);font-weight:700;margin-bottom:8px">Exam Morning</p>
+          <p style="font-size:0.85rem;color:rgba(245,240,232,0.75)">Arrive 20 minutes early. Bring ID (Personalausweis/Reisepass), pen, water. Eat a good breakfast. Speak German to yourself on the way there.</p>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);padding:18px">
+          <p style="color:var(--gold);font-weight:700;margin-bottom:8px">During the Exam</p>
+          <p style="font-size:0.85rem;color:rgba(245,240,232,0.75)">Read ALL questions before listening/reading. Use ALL the time given. Check your writing for verb placement and endings. Don't leave blanks.</p>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);padding:18px">
+          <p style="color:var(--gold);font-weight:700;margin-bottom:8px">Speaking Section</p>
+          <p style="font-size:0.85rem;color:rgba(245,240,232,0.75)">Speak confidently, even with mistakes. Use connectors and opinions phrases. Make eye contact. If you don't understand — ASK in German! "Können Sie das bitte wiederholen?"</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer>
+  <div style="margin-bottom:16px">
+    <div class="flag-bar" style="margin:0 auto 20px;width:fit-content">
+      <div class="flag-black"></div>
+      <div class="flag-red"></div>
+      <div class="flag-gold"></div>
+    </div>
+  </div>
+  <p><strong>Deutsch Meistern</strong> — Complete A1 to B1 Guide for the Berlin Sprachtest</p>
+  <p style="margin-top:8px">Covering <strong>1,200+ vocabulary examples</strong> · <strong>300+ grammar rules</strong> · <strong>150+ authentic dialogues</strong> · <strong>Full exam strategies</strong></p>
+  <p style="margin-top:16px;font-size:0.78rem;opacity:0.5">Viel Erfolg! 🍀 — Good luck with your German journey and your Berlin exam!</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Inters
